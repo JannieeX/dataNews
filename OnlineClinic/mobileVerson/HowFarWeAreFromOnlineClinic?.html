@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-x: hidden;">
+
+<head>
+	<meta charset="utf-8">
+	<title>在线问诊十六年</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<!-- Favicons -->
+	<link href="img/favicon.png" rel="icon">
+	<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700"
+		rel="stylesheet">
+
+	<!-- Bootstrap CSS File -->
+	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Libraries CSS Files -->
+	<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="lib/animate/animate.min.css" rel="stylesheet">
+	<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+	<!-- Main Stylesheet File -->
+	<link href="css/style.css" rel="stylesheet">
+	<style type="text/css">
+		.fontsize18 {
+			font-size: 14px !important;
+		}
+
+
+		p {}
+	</style>
+	<title>ECharts</title>
+	<!-- 引入 echarts.js -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+	<script type="text/javascript" src="js/chartStyle.js"></script>
+	<link href="css/chartStyle.css" rel="stylesheet">
+</head>
+
+<body>
+	<!--==========================
+  Header
+  ============================-->
+	<!--	<header id="header">-->
+
+	<!--<div id="topbar">
+       <div class="container">
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>-->
+
+	<!-- <div class="container">
+
+     <div class="logo float-left">
+        <h1 class="text-light"><a href="#intro" class="scrollto"><span>Rapid</span></a></h1>
+        <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> 
+      </div> 
+
+       <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li class="drop-down"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li>
+          <li><a href="#footer">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>-->
+
+	<!-- </header> -->
+	<!-- #header -->
+
+	<!--==========================
+    Intro Section
+  ============================-->
+	<section id="intro" class="clearfix" style="padding-bottom: 20px;padding-top: 30px;height: 100vh;">
+		<div class="container d-flex h-100">
+			<div class="row justify-content-center align-self-center" style="width: 100%;text-align: center;margin: 0;padding-top: 23vh;">
+				<!-- <div class="col-md-6 intro-info order-md-first order-last" style="max-width: 70%;"> -->
+				<p style="font-size: 20px;margin: 0;color:#3f3c63;font-weight:500;">在线问诊十六年：</p>
+				<p style="font-size: 20px;margin: 0;color:#3f3c63;font-weight:500;">“不见面”就医常态化还有多远?</p>
+				<p class="btn-get-started" style="padding: 0;margin: 0;position: relative;top: 2px;color: #045799">
+					How&nbsp;Far&nbsp;We&nbsp;Are&nbsp;From&nbsp;Online&nbsp;Clinic?</p>
+				<img src="img/intro-img.gif" alt="" class="img-fluid" style="max-width: 70%;">
+				<!--<div>
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+		  </div>-->
+
+			</div>
+
+			<!-- <div class="col-md-6 intro-img order-md-last order-first">
+					<img src="img/intro-img.gif" alt="" class="img-fluid">
+				</div> -->
+		</div>
+
+		</div>
+	</section>
+	<!-- #intro -->
+
+	<div id="main" style="width: 100%">
+		<div>
+			<!--==========================
+      导语
+    ============================-->
+			<!--中间内容-->
+			<div id="center" style="width: 86%;float: right;position: relative;right: 7%;">
+				<section id="about" style="padding: 0px;">
+					<div class="container">
+						<div class="col-lg-12 col-md-6" style="padding: 0px;">
+							<div class="about-content">
+								<p>和许多足球爱好者一样，王泽云也常被球场上留下的旧伤复发困扰。但在决定是否要去医院之前，他习惯先打开在线问诊平台——线上医师会告诉他没必要请假跑一趟医院，而且其实他自己早就知道需要用哪些药。
+								</p>
+								<p>在因疫情为人们所熟知之前，在线问诊其实已推行多年。2004年，寻医问药网上线，其官网显示，这是国内首个线上医患交流平台。至今，在线问诊在中国已走过十六年。那么，被“唱好”多年的在线问诊，究竟是破解看病难题的新药，还是冠以“互联网+”之名的新瓶装旧酒？在线问诊能否向常态化方向发展？我们抓取了微医和寻医问药网两个在线问诊平台的医生、医院及446927条问答数据，试图呈现真实的在线问诊图景。
+								</p>
+							</div>
+						</div>
+
+						<div >
+							<div class="Echart">
+								<h1>中国在线问诊平台分类</h1>
+								<!--<div><span><img src="img/chart/chart1.png"></span><span style="color:#494949;font-size:14px;font-weight:300;">本稿数据来源平台<span></div>-->
+								<div id="chart1" class="chart" style="left: -15px;width: 370px;"></div>
+								<div class="chart-exp">
+									*轻模式指主要通过同线家机构医疗合作的方式提供线下医疗服务，重模式指通过自建线下诊所向用户提供医疗服务。
+									<br>数据来源：1.艾瑞咨询.2015年中国在线问诊行业研究报告[R].2016.
+									2.Mongan Stanley.The Era of Internet Healthcare[R].2020.
+								</div>
+							</div>
+							<script type="text/javascript" src="js/datavisual.js"></script>
+							<script type="text/javascript" src="js/parallel.js"></script>
+						</div>
+					</div>
+					<!--==========================
+      医院分布
+    ============================-->
+					<a name="1" id='maodian1'></a>
+					<div class="container">
+						<div class="row">
+							<!-- 标题放这里 -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<h2 class="fontsize18"><img src="img/visual/听诊器.gif" width="10%">医院：</h2>
+									<h2 class="fontsize18">二三级医院居多，平台医院数据高于实际</h2>
+								</div>
+							</div>
+
+							<!-- 文字 class="about-content" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<p>据统计，截至4月7日，寻医问药网上共有8631家医院提供在线问诊服务，以二级医院为主，比例达到43%，三级医院则占到31%。这与现实中的医院构成大不相同。事实上，中国的医疗机构呈“金字塔”分布，即以一级医院为主，二级、三级医院依次减少，优质三甲医院更是塔尖的少数。
+									</p>
+								</div>
+							</div>
+
+							<div>
+								<div class="Echart">
+									<h1>二、三级医院占据多数，平台医院数据存疑</h1>
+									<div class="chart-legend">
+										<span
+											style="background-color:  #d1e5f1;display:inline-block;width:10px;">&nbsp</span><span>&nbsp一级医院&nbsp&nbsp</span>
+										<span
+											style="background-color: #acc7e2;display:inline-block;width:10px;">&nbsp</span><span>&nbsp二级医院&nbsp&nbsp</span>
+										<span
+											style="background-color:  #85aad4;display:inline-block;width:10px;">&nbsp</span><span>&nbsp三级医院&nbsp&nbsp</span>
+										<span
+											style="background-color: #5b90c5;display:inline-block;width:10px;">&nbsp</span><span>&nbsp三甲医院</span>
+									</div>
+									<div class="chart-tip">点击信息图查看各部分具体数据</div>
+									<div id="chart2" class="chart" style="left: -15px;width: 370px;"></div>
+									<div class="chart-exp" style="width:90%">
+										*政府数据中，三甲医院截止2020年2月底，其他截至2018年底。预估数据的计算方法详见文末数据说明2。
+										<br>数据来源：1.微医 2.寻医问药网 3.国家卫生健康委员会《中国卫生健康统计年鉴》4.中国政府网统计信息中心《2020年2月底全国医疗卫生机构数》
+									</div>
+								</div>
+								<script type="text/javascript" src="js/datavisual.js"></script>
+								<script type="text/javascript" src="js/parallel.js"></script>
+							</div>
+
+							<!-- 文字 class="about-content" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<p>平台上的医院数量真实性仍有待考量。以三级医院数量为例，中国政府网统计信息中心资料显示，截至2020年2月底，全国三级医院数量为2762
+										家。而截至2020年4月7日，寻医问药网上三级医院数量为2718家，微医则有3646 家。即使考虑到两个月间新增的三级医院数量，平台的统计仍然过高。
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--==========================
+      医师
+    ============================-->
+					<a name="2" id='maodian2'></a>
+					<div class="container">
+						<!-- part3 -->
+						<div class="row">
+							<!-- 标题放这里 -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<h2 class="fontsize18"><img src="img/visual/听诊器.gif" width="10%">医师：</h2>
+									<h2 class="fontsize18">中高级医师数量过半，评分与回答数挂钩</h2>
+								</div>
+							</div>
+
+							<!-- 文字 class="about-content" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<p>《2019中国卫生健康统计年鉴》显示，中国约五分之一卫生技术人员有中高级职称，而在寻医问药平台，中高级医师占比达到53%，远高于实际比例。[1]</p>
+									<p>那么，中高级职称医师更多，是否意味着患者的提问多数会由他们回答？实际上，医师和住院医师回答了平台上超过一半的问题，而数量最多的副主任医师仅回答了十分之一问题。根据统计，在所有的15万医生中，未回答过问题的医生占92%。为何存在这么多“影子医师”？截至发稿前，寻医问药平台尚未给出回复。
+									</p>
+								</div>
+							</div>
+
+							<!--  图片class="about-img" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-img">
+									<img src="img/visual/4-doctornum.jpeg" alt="">
+								</div>
+							</div>
+
+							<!-- 文字 class="about-content" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<p>每个平台设置的医生入驻条件不尽相同，但大多需要医生拿到执业医师证。重庆医科大学临床学研究生周晓明称，他们班约三分之一同学拿到执业医师证后加入在线问诊，平常就利用空余时间回答问题。他认为，来线上提问的往往并非疑难杂症，经过7年学习和实践，自己的专业水平完全可以处理大部分问题。腾讯研究院的分析也称，我国有海量的医疗剩余资源有待激活，其中就包括194万潜在医生资源的时间盈余。[2]
+									</p>
+								</div>
+							</div>
+
+							<!--  图片class="about-img" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-img">
+									<img src="img/visual/5-doctorScore.jpeg" alt="">
+								</div>
+							</div>
+
+							<!-- 文字 class="about-content" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<p>微医的医生评分与问诊量大致呈现正相关关系，问诊量最高的医生评分均为10分满分，而且大部分医生都在9分以上。相较之下，寻医问药网的医生评分也普遍较高，但与问诊量的关系并不明显。
+									</p>
+									<p>这与平台的推荐机制有关。线下就医时，医生的服务质量缺乏患者反馈这一环节，但在在线问诊时，评分会影响平台对医生的推荐和排名。医生评分越高，得到的曝光和推荐也越多。因此，医生会尽量避免遭遇“差评”。
+									</p>
+									<p>此外，评分普遍较高或许受到患者预期影响。“因为患者付出的金钱和时间成本更低
+										，本身选择线上就诊的时候心里预期并不会特别高。”泌尿外科医生李金表示，在线上接诊时感到的医患关系压力明显减小，他无需扮演被“神话”的万能医生角色。如果患者问题描述不清，或者表现出对医生明显不信任的话，他通常会联系客服退回问题。
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--==========================
+      患者
+    ============================-->
+					<a name="3" id='maodian3'></a>
+					<div class="container">
+						<div class="row">
+							<!-- 标题放这里 -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<h2 class="fontsize18"><img src="img/visual/听诊器.gif" width="10%">患者：</h2>
+									<h2 class="fontsize18">多提问私密问题，“不见面”更易诉说难言之疾</h2>
+								</div>
+							</div>
+
+							<!-- 文字 class="about-content" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<p>研究发现，年轻、收入低、疾病紧急程度一般或者外地的患者更倾向于使用在线医疗。[3]在寻医问药网过去半年（2019年9月29日至2020年3月29日）问答数据的统计中，10-29岁患者的问题占据半壁江山。而在提问类型方面，与生殖相关的私密问题超过十四万条，超过所有数据的四分之一。除私密问题外，不太致命且发病原因尚不清楚的疾病更容易被提及。
+									</p>
+								</div>
+							</div>
+
+							<!--  图片class="about-img" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-img">
+									<img src="img/visual/questions.jpeg" alt="">
+								</div>
+							</div>
+
+							<!-- 文字 class="about-content" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<p>隐秘的、互动的在线问诊平台，为无处诉说的烦恼提供了树洞，也扮演着性教育的家长角色。寻医问药网的问答里，不乏未成年少女的求助：“ 被性侵了，会怀孕吗？”
+										回复此类问题时，医生往往建议女孩拿起法律武器维护权益。作为一名泌尿外科医生，李金有20%-30%的时间都在解答性教育科普问题：“其实很多患者都没有医学常识，尤其十多岁的男孩经常有性方面的提问。但这些问题并不是一种疾病状态，而是生理卫生的小知识。”受耻感文化影响的未成年人，并非那么容易开口讲诉难言之疾，“不见面"就医则提供了一种解决方案。
+									</p>
+									<p>然而，这些私密的提问或许面临隐私暴露风险。在春雨医生、好大夫等网站上，都可以看到提问者的咨询历史和问答详情。4月10日，国家计算机病毒应急处理中心公布，春雨医生、好大夫、平安好医生等9款医疗类APP涉嫌隐私不合规行为，包括未向用户明示申请的全部隐私权限、未说明收集使用个人信息规则、未提供有效的更正、删除个人信息及注销用户账号功能。平台对患者隐私的保护还有待提升。
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--==========================
+      价格
+    ============================-->
+					<a name="4" id='maodian4'></a>
+					<div class="container">
+						<div class="row">
+							<!-- 标题放这里 -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<h2 class="fontsize18"><img src="img/visual/听诊器.gif" width="10%">价格：</h2>
+									<h2 class="fontsize18">普遍高于线下门诊费用，缺乏优势</h2>
+								</div>
+							</div>
+
+							<!-- 文字 class="about-content" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<p>微医主要提供图文问诊和视话问诊两种服务，均需要付费。除少数医生问诊价格超过500元以外，大多数医生的图文问诊价格在0到250元之间，并集中在100元以内。
+									</p>
+								</div>
+							</div>
+
+							<div>
+								<div class="Echart">
+									<h1>在线问诊定价跨度大，用户青睐低价</h1>
+									<div class="chart-exp">点击下面按钮查看分类数据</div>
+									<div id="chart7" class="chart" style="width: 350px;"></div>
+									<div class="chart-exp">
+										数据来源：微医（有效数据共计37133条）<br>数据截至：2020年4月7日
+									</div>
+								</div>
+								<script type="text/javascript" src="js/datavisual.js"></script>
+								<script type="text/javascript" src="js/parallel.js"></script>
+							</div>
+
+							<!-- 文字 class="about-content" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<p>目前，在线问诊并未全面纳入医保报销范围，因此在就诊价格上优势并不明显。例如，主任医师的平均图文问诊价格为77元，而主治医师价格仅为26元左右，均低于线下医院医事服务费（原挂号费）。但是，扣除医保报销的40元后，在线问诊的价格优势消失。而专家视话问诊费用则普遍高于北京三甲医院知名专家的问诊费用。
+									</p>
+								</div>
+							</div>
+
+							<!--  图片class="about-img" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-img">
+									<img src="img/visual/9-averagePrice.jpeg" alt="">
+								</div>
+							</div>
+
+							<!-- 文字 class="about-content" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<p>在线问诊费是否过高？北京医院的主治医生张凯称：“如果是质量比较高的回复，普遍应比线下挂号费要高，因为线下没有市场调节，实在是太低了。纯线上模式的互联网医院价格都是弹性的，医生有很大的自主权。”
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--==========================
+      应用
+    ============================-->
+					<a name="5" id='maodian5'></a>
+					<div class="container">
+						<div class="row">
+							<!-- 标题放这里 -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<h2 class="fontsize18"><img src="img/visual/听诊器.gif" width="10%">应用：</h2>
+									<h2 class="fontsize18">场景有限，仅限于复诊和慢性疾病用药</h2>
+								</div>
+							</div>
+
+							<!-- 文字 class="about-content" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<p>国家对互联网医疗的诊疗范围有严格规定，根据2018年国家卫健委发布的《互联网诊疗管理办法（试行）》，线上医疗机构不得对首诊患者开展互联网诊疗活动。这意味着，对于没有在医院线下确诊的用户，在线问诊平台仅能提供建议，不能下诊断或开处方。当患者出现病情变化需要医务人员亲自诊查时，要引导患者到实体医疗机构就诊。
+									</p>
+									<p>因此，在线医疗目前无法成为医院的“替补品”，更多的是为患者提供“确诊前”和“确诊后”的服务。一些患者在线问诊后，最终还会回到实体医院就诊。太原理工大学的李闯同学，因精神焦虑到山西医科大学第一医院线上平台问诊，但医生建议他“还是要去医院看”。兜兜转转还是要回到实体医院就诊，这使得他很不满意。
+									</p>
+								</div>
+							</div>
+
+							<div>
+								<div class="Echart Echart8">
+									<h1>在线问诊流程图</h1>
+									<div>
+										<span
+											style="color:#ffffff;font-size:13px;display:inline-block;width:65px;text-align:center;background-color:#5b90c5;border-radius: 5px;">线上流程
+										</span>
+										&nbsp&nbsp
+										<span
+											style="display:inline-block;width:65px;text-align:center;color:#ffffff;font-size:13px;background-color:#9b8eb9;border-radius: 5px;">线下流程
+										</span></div>
+									<div id="chart8" class="chart" style="left: -15px;width: 350px;"></div>
+									<div class="chart-exp">
+										数据来源：国家中医药管理局.互联网诊疗管理办法(试行)[EB/OL].2018-7-17.
+									</div>
+								</div>
+								<script type="text/javascript" src="js/datavisual.js"></script>
+								<script type="text/javascript" src="js/parallel.js"></script>
+							</div>
+
+							<!-- 文字 class="about-content" -->
+							<div class="col-lg-12 col-md-6">
+								<div class="about-content">
+									<p>“不见面”的就诊形式，也带来了诸多不便。李金称：“线上有时候是不能够判断病人情绪的，就医说通俗一点其实也是人与人之间的交流，考虑治疗方案的时候不能够兼顾患方的接受程度。”张凯则认为，不方便的地方在于不能像面诊一样进行检查，很多患者是初次就诊，缺乏必要的辅助检查，在给出诊断的时候会存在经验因素偏大的情况。
+									</p>
+									<p>这一情况正在好转。在国家“互联网+医疗”的政策推动下，很多省份、医院建立了自己的在线问诊平台。上海复旦大学附属中山医院副院长钱菊英在接受腾讯网采访时表示，相较于依托互联网公司的在线问诊平台，由医院主导的在线问诊掌握了线下辅助检查的资源，有能力进行后续治疗。[4]
+									</p>
+									<p>受疫情影响，多部委下发多个文件推动互联网医疗领域的改革探索，为互联网医疗“松绑”。一方面是接入医保体系，明确将常见病、慢性病“互联网+”复诊服务纳入医保基金支付范围；另一方面放开互联网首诊，4月7日发布的《关于推进“上云用数赋智”行动
+										培育新经济发展实施方案》首次提出探索推进互联网医疗医保首诊制和预约分诊制。不过，每日经济新闻在4月17日的报道中指出，方案中指的不是探索医疗首诊，而是医保首诊，互联网医疗首诊并没有真正放开，现阶段互联网医疗尚未成熟，放开首诊具有一定风险。[5]
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!--==========================
+      结语
+    ============================-->
+						<a name="6" id='maodian6'></a>
+
+						<div class="container">
+							<div class="row">
+								<!-- 标题放这里 -->
+								<div class="col-lg-12 col-md-6" style="padding: 0px;">
+									<div class="about-content">
+										<h2 class="fontsize18"><img src="img/visual/听诊器.gif" width="10%">结语</h2>
+									</div>
+								</div>
+
+								<!-- 文字 class="about-content" -->
+								<div class="col-lg-12 col-md-6" style="padding: 0px;">
+									<div class="about-content">
+										<p>距离在线问诊常态化，尚有一段路要走。不过，随着互联网医保首诊制和预约分诊制的逐步推行，在线问诊或许可以跳出简单咨询的窠臼。此外，在线问诊一定程度上填补了医疗资源差距沟壑。张凯认为，互联网医院的价值在于，很多医疗资源匮乏地区的患者也能得到好的意见。
+										</p>
+										<p>目前，平台层面仍缺乏用户黏性。受踢足球留下的后遗症困扰的王泽云，在线问诊结束后就删掉了手机里的APP，只有在需要用时才会下载回来。而医生的选择也受到收入激励的影响，周晓明笑着说：“为什么年轻医生愿意答题？因为他们实在是太穷了。我上班以后可能不会继续在线上接诊。这么说吧，如果你在重庆月收入1.5~2万，你还会每天挤出一小时挣这一千块吗？”
+										</p>
+										<p>(应受访者要求，文中王泽云 周晓明 李金 张凯 李闯 均为化名)
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--==========================
+      数据说明、参考文献、分工
+    ============================-->
+	<hr>
+	<div style="font-size: 12px;text-align:justify; text-justify:inter-ideograph;word-break: break-all;">
+					<b><font color=413e66>数据说明：
+					</font></b>
+					<br>1. 微医:https://www.guahao.com/；寻医问药网：http://www.xywy.com/
+					<br>2.预估数据的计算方法：三甲医院数量以《中国卫生健康统计年鉴》近十年医院数据为基础，计算出最大年增幅为108家（2010-2011）。据此估计，2020年4月底全国三甲医院最大数值为1442+108*2+108/12*4=1694家，但不排除因为疫情三甲医院数量激增的可能性。其他级别医院以统计信息中心实时通报数据为基础，计算出近三个月平均月增幅，并分别进行相加得出。			
+					<br>3. 微医每个分类下医生数据只显示38页，医院数据只显示61页，因而只能利用显示的数据进行分析。其中医生数据于4月7日抓取，共计37133条；医院数据于4月1日抓取，共计17024条。
+						寻医问药网医生数据于3月31日抓取，共计163574条，其中最新在线专家150947条，电话问诊专家12093条，常见疾病推荐专家534条。由于仅电话专家显示价格，医生收费部分根据问答收费中的实际付费情况进行分析。寻医问药网医院数据于4月1日抓取，共计8631条。
+					<br>4.官方统计医师比例经四舍五入后，大于100%，因此对误差值最大的主任医师数值向下取整。
+					<br>5.寻医问药网问答数据分布于2019年3年3月-2020年3月之间，共计446927条。								
+					<br><br>
+					<b><font color=413e66>参考文献：
+					</font></b>
+					<br>[1]国家卫生健康委员会.中国卫生健康统计年鉴2019[M].北京：中国协和医科大学出版社，2019.	
+					<br>[2]孙怡, 陈丽月, 周琴. 医疗+分享,会擦出怎样的火花?[J]. 大数据时代, 2017(04):58-73.									
+					<br>[3]戚淼杰,韩优莉.医院就诊患者在线医疗使用现状及其相关因素研究——基于北京市三级医院门诊患者的调查[J].中国卫生政策研究,2019,12(07):70-74.										
+					<br>[4]腾讯网-医院汇.疫情催生线上诊疗，互联网医院路在何方？[EB/OL].：https://new.qq.com/rain/a/20200417A06M8000，2020-4-25.								
+					<br>[5]每日经济新闻.独家！互联网医疗首诊未放开，纳入医保更系误读[EB/OL].：http://www.nbd.com.cn/articles/2020-04-17/1426376.html，2020-4-25.	
+					<p></p>								
+	</div>
+					<!-- <div style="background: #f5f8fd;
+					position: relative;
+					left: -66.5%;
+					width: 222.5%;
+					padding-top: 20px;
+					padding-bottom: 20px;">
+					<font style="font-size:12px";>
+					<center>项目统筹：熊隽晗、王云林</center>
+					<center>数据抓取及分析：张文骁、王云林、王楠、张舒琳、熊隽晗</center>
+					<center>数据可视化：熊隽晗、王云林、张舒琳</center>
+					<center>采访及文案：张舒琳、张文骁</center>
+					<center>网页设计：王楠、张文骁、熊隽晗</center>
+					<center>视觉效果：王楠</center>
+					<center>指导教师：方洁
+						<p>
+					</center>
+					<center>特别鸣谢：张宇 提供技术支持
+					</center>
+					</p>
+						<center>中国人民大学 新闻学院&商学院IMBA 北京师范大学 新闻与传播学院 研究生</center>
+						<center>《数据新闻与可视化》课程出品</center>
+						<center>欢迎联系我们：xiongjunhan@ruc.edu.cn</center>
+						<center>&copy; Copyright</center>
+					</font>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</section>
+<!-- #about -->
+
+</div>
+
+<!--底部-->
+<div id="right" style="float: left;background: #f5f8fd;width: 100%;padding-top:20px;padding-bottom: 20px;">
+<font style="font-size:12px";>
+<center>项目统筹：熊隽晗、王云林</center>
+<center>数据抓取及分析：王云林、张文骁、王楠、张舒琳、熊隽晗</center>
+<center>数据可视化：熊隽晗、王云林、张舒琳</center>
+<center>采访及文案：张舒琳、张文骁</center>
+<center>视觉设计：王楠  </center>
+<center>网页开发：张文骁</center>
+<center>特别鸣谢：张宇 提供技术支持
+</center>
+<center><p></p>指导教师：方洁<p></p>
+</center>
+
+	<center>中国人民大学新闻学院&商学院IMBA 北京师范大学新闻与传播学院</center>
+	<center>&copy;中国人民大学《数据新闻与可视化》课程出品</center>
+	<center>欢迎联系我们：xiongjunhan@ruc.edu.cn</center>
+</font>
+</div>
+</div>
+<!-- <div style="background: #f5f8fd;position: fixed;width: 100%;bottom: 0;padding-top: 10px;padding-bottom: 10px;">
+
+<center>中国人民大学 新闻学院&商学院IMBA 北京师范大学 新闻与传播学院 研究生</center>
+<center>《数据新闻与可视化》课程出品</center>
+<center>欢迎联系我们：xiongjunhan@ruc.edu.cn</center>
+<center>&copy; Copyright</center>
+
+</div> -->
+</div>
+
+	<!--==========================
+    Footer
+  ============================-->
+	<!-- <footer id="footer" class="section-bg">
+		<div class="footer-top">
+			<div class="container">
+				<div class="copyright">
+					&copy; Copyright <strong></strong>
+				</div>
+				<div class="credits">
+				</div>
+			</div>
+		</div>
+</body>
+
+</html>
