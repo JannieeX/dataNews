@@ -1,0 +1,146 @@
+
+.Echart{
+  width: 100%;
+}
+
+.Echart2{
+  height: 520px;
+}
+
+/*信息图标题格式*/
+.Echart > h1 {
+  color:#3d3a60;
+  font-size:18px;
+  font-weight:500;
+}
+/*信息图数据说明格式*/
+.chart-exp {
+  color:#7B7F83;
+  font-size:13px;
+  font-weight:200;
+  line-height: 1.2;
+}
+/*信息图图例*/
+.chart-legend{
+  color:#494949;
+  font-size:14px;
+  font-weight:300;
+}
+/*信息图交互提示*/
+.chart-tip{
+  color:#7B7F83;
+  font-size:11px;
+  font-weight:200;
+  line-height: 1.5;
+  padding-top: 10px;
+}
+
+
+
+/*宽屏幕配置*/
+@media(min-width: 426px){
+   
+  .chart{
+    width: 700px;
+    height:400px;
+    text-align:center;
+    
+  }
+
+  #chart1{
+   /*width: 1200px;
+    height:450px;*/
+    text-align:center;
+    margin: auto;
+  }
+
+  #chart2{
+    width: 100%;
+    height:500px;
+  }
+  
+  .chart20{
+    width: 80px;
+    height:111px;
+    position:relative;
+    top:-469px;
+    left:80px; 
+    Z-index:-1;
+    font-size: 11px;
+    color: #cccccc;
+  }
+  .chart22{
+    left:100px; 
+  }
+
+  #chart8{
+    width: 600px;
+    height:600px;
+  }
+  
+  .chart-tip{
+    display: none;
+  }
+
+  #chart9{
+    display: none;
+  }
+
+
+}
+
+/*手机配置*/
+@media(max-width: 425px){
+ 
+  .chart{
+    width: 320px;
+    height:375px;
+  }
+  
+
+  #chart8{
+    height:600px;
+  
+  }
+  /*信息图标题格式*/
+  .Echart > h1 {
+    font-size: 14.5px;
+    font-weight: 500;
+    color: #494949;
+  }
+  /*信息图数据说明格式*/
+  .chart-exp {
+    font-size:11px;
+  }
+  /*信息图图例*/
+  .chart-legend{
+    font-size:11px;
+
+  }
+
+  #chart2{
+    display: none;
+  }
+  #chart9{
+    height: 300px
+  }
+  .chart20{
+    height:63px;
+    position:relative;
+    top:-273px;
+    left:70px; 
+    Z-index:-1;
+    font-size: 6px;
+    color: #cccccc;
+    width: 200px;
+  }
+  .chart22{
+    left:100px; 
+  }
+  .Echart2{
+    height: 350px;
+  }
+
+
+
+}

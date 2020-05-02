@@ -1,0 +1,496 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+body {
+  background: #fff;
+  color: #444;
+  font-family: "Open Sans", sans-serif;
+}
+
+.fontsize18 {
+  font-size: 23px !important;
+  line-height: 100% !important;
+}
+div{
+  padding: 0px;
+  /*
+  border-style: double;
+  border-color: red;
+  border-width: 2px;
+  */
+}
+
+p {
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-size: 14.5px;
+  line-height: 190%;
+  text-align: justify;
+  text-justify: inter-character
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* Back to top button */
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  background: #5b90c5;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 1;
+  font-size: 16px;
+  border-radius: 50%;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+  z-index: 11;
+}
+.back-to-top:hover{
+  position: fixed;
+  display: none;
+  background: #3f3c63;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 1;
+  font-size: 16px;
+  border-radius: 50%;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+  z-index: 11;
+}
+
+.back-to-top i {
+  padding-top: 12px;
+  color: #fff;
+}
+
+/* Prelaoder */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #f2f2f2;
+  border-top: 6px solid #1bb1dc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.tlinks{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+
+/*--------------------------------------------------------------
+# Intro Section
+--------------------------------------------------------------*/
+#intro {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #f5f8fd url("../img/intro-bg.jpg") center top no-repeat;
+  background-size: cover;
+}
+.row1{
+  width: 100%;
+  text-align: center;
+}
+
+.row1> h1 {
+  font-family: PingFangSC-Regular, sans-serif;
+  color: #3d3a60;
+  margin-bottom: 5px;
+  font-size: 45px;
+  font-weight: 400;
+}
+.row1> h2 {
+  font-family: PingFangSC-Regular, sans-serif;
+  color: #3d3a60;
+  margin-bottom: 5px;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+
+.row1> h3 {
+  font-family: arial;
+  font-size: 21px;
+  font-weight: 400;
+  /*text-transform: uppercase;*/
+  padding: 0;
+  color: #045799;
+  /*background: #1bb1dc;*/
+  margin: 0;
+}
+
+.img-fluid{
+  width: 600px;
+}
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+
+/* Sections Header
+--------------------------------*/
+
+#main{
+  width: 100%;
+  
+}
+
+/*--------------------------------------------------------------
+# 导航条
+--------------------------------------------------------------*/
+#navbar{
+  z-index: -1;
+  width: 25%;
+  text-align: center;
+  padding-top: 40px;
+  line-height: 1.4;
+  position: absolute;
+  left: 0;
+}
+#navbar>a{
+  color: gray;
+}
+
+.chart-xbt{
+  font-size:15px;
+  font-weight: 400;
+}
+
+.section-header h3 {
+  font-size: 36px;
+  color: #413e66;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-header p {
+  text-align: center;
+  margin: auto;
+  font-size: 15px;
+  padding-bottom: 60px;
+  color: #535074;
+  width: 50%;
+}
+
+/* Section with background
+--------------------------------*/
+
+
+/* About Us Section
+--------------------------------*/
+
+.row{
+  width: 45%;
+  margin:auto;
+}
+#about {
+  padding:0px;
+}
+
+#about .about-content {
+  padding-top: 40px;
+}
+
+#about .about-img {
+  position: relative;
+  
+}
+
+#about .about-img img {
+  width: 102%;
+  transition: .5s;
+}
+
+.about-img > h1 {
+  color:#3d3a60;
+  font-size:18px;
+  font-weight:500;
+}
+
+.dbt{
+  color: #3f3c63;
+  font-size: 23px;
+  font-weight: 500;
+}
+.xbt{
+  color: #3f3c63;
+  font-size: 23px;
+  font-weight: 500;
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer {
+  background: #f5f8fd;
+  padding-top:20px;
+  padding-bottom: 20px;
+
+
+}
+
+.author {
+  font-size: 10px;
+  line-height: 1.5;
+  width: 100%;
+  text-align: center;
+  background: #f5f8fd;
+  width: 100%;
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+/*--------------------------------------------------------------
+# Responsive Media Queries
+--------------------------------------------------------------*/
+
+@media (min-width: 991px) {
+  #call-to-action .cta-btn-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 992px) {
+  #intro .intro-info {
+    padding-top: 80px;
+  }
+
+  #testimonials .testimonial-item p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 991px) {
+  #topbar {
+    display: none;
+  }
+
+  #header {
+    height: 70px;
+    padding: 15px 0;
+  }
+
+  #header .logo h1 {
+    font-size: 28px;
+    padding: 8px 0;
+  }
+
+  #why-us .why-us-content {
+    padding-top: 30px;
+  }
+
+  #pricing {
+    padding-bottom: 30px;
+  }
+
+  #pricing .card {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+
+  #faq #faq-list a {
+    font-size: 18px;
+  }
+
+  #faq #faq-list i {
+    top: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  #intro {
+    height: auto;
+    padding: 80px 0 60px 0;
+  }
+
+  #intro .container {
+    height: auto !important;
+  }
+
+  #intro .intro-img {
+    width: 80%;
+  }
+
+  #intro .intro-info {
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  #intro .intro-info h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+
+  .section-header p {
+    width: 100%;
+  }
+
+  #testimonials .testimonial-item {
+    text-align: center;
+  }
+
+  #testimonials .testimonial-item .testimonial-img {
+    float: none;
+    margin: auto;
+  }
+
+  #testimonials .testimonial-item h3,
+  #testimonials .testimonial-item h4,
+  #testimonials .testimonial-item p {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 574px) {
+  #footer .footer-top .social-links a {
+    margin-bottom: 25px;
+  }
+  .row{
+    width: 100%;
+    margin:auto;
+  }
+ .row1{
+  padding-top: 10vh;
+ }
+  .row1 >h1{
+    font-size: 20px;
+    line-height: 1.5;
+    color:#3f3c63;
+    font-weight:500;
+    margin: 0;
+  }
+  .row1 >h2
+  {
+    font-size: 20px;
+    line-height: 1.8;
+    color:#3f3c63;
+    font-weight:500;
+    margin: 0;
+  }
+  .row1 >h3{
+    color: #045799;
+    font-size: 14px;
+    
+  }
+
+  .img-fluid{
+    width: 345px;
+    height: 300px;
+     /*border-style: double;
+    border-color: red;
+    border-width: 2px;*/
+  }
+
+  #navbar{
+    display: none;
+  }
+
+.author {
+  font-size: 7px;
+}
+.about-img > h1 {
+  font-size:14.5px;
+  font-weight:500;
+  color: #494949;
+}
+.dbt{
+  display: inline-block;
+  width: 100%;
+  color: #3f3c63;
+  font-size: 20px;
+  font-weight: 500;
+}
+.xbt{
+  color: #3f3c63;
+  font-size: 16px;
+  font-weight: 500;
+}
+#intro{
+  height: 100vh;
+}
+.chart-xbt{
+  font-size: 12px;
+}
+}
