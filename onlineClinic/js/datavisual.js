@@ -479,3 +479,119 @@ option = {
 if (option && typeof option === "object") {
     myChart.setOption(option, true);
 }
+
+////////////////////////////////////////////////
+//图表3 问诊流程
+////////////////////////////////////////////////
+var dom = document.getElementById("chart10");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+var data = {
+    "name": "在线问诊",
+    "children": [
+        {
+            "name": "预约挂号",
+            "children": [
+                { "name": "线下就诊",label:{backgroundColor :'#9b8eb9'}},
+            ]
+        },
+        {
+            "name": "在线诊疗",
+            "children": [
+                {"name": "初诊病人",
+                    "children": [
+                         { "name": "给予建议",
+                         "children": [{ "name": "患者实体机构就诊",label:{distance:-12,backgroundColor :'#9b8eb9'},},]
+                        },
+                    ]
+            },
+                {"name": "复诊病人",
+                "children": [
+                         { "name": "复诊",
+                         "children": [
+                             { "name": "诊断不变",label:{distance:-15},
+                            "children": [{ "name": "开具处方附电子签名",label:{distance:-15},
+                                 "children": [{ "name": "药师审核",
+                                    "children": [{ "name": "委托第三方机构配送",label:{distance:-15}},]
+                                },
+                                 
+                                ]}]
+                            }
+                             ,{ "name": "病情变化",label:{backgroundColor :'#9b8eb9'},
+                             "children": [{ "name": "需要医务人员亲自检查",label:{distance:15,backgroundColor :'#9b8eb9'},
+                                 "children": [{ "name": "诊疗终止",label:{backgroundColor :'#9b8eb9'},
+                                    "children": [{ "name": "引导患者实体机构就诊",label:{distance:11,backgroundColor :'#9b8eb9'}},]
+                                },
+                                ]}]
+                            },]
+                        },
+                    ]
+            }
+            ]
+        },
+        {
+            "name": "在线咨询",
+            "children": [
+                {"name": "给予意见"}
+            ]
+        }
+    ]
+};
+
+var option = {
+    tooltip: {
+            trigger: 'item',
+            triggerOn: 'mousemove'
+        },
+        series:[
+            {
+                type: 'tree',
+
+                data: [data],
+
+                left: '4%',
+                right: '5%',
+                top: '8%',
+                bottom: '8%',
+                symbolSize: 0.1,
+                initialTreeDepth:-1,
+                itemStyle:{
+                borderColor :'#5b90c5',
+                borderWidth :2
+                },
+                symbol: 'emptyCircle',
+                edgeShape: 'polyline',
+
+                orient: 'vertical',
+
+                expandAndCollapse: true,
+
+                label: {
+                    position: 'top',
+                    distance:-5,
+                    //rotate: -90,
+                    verticalAlign: 'middle',
+                    align: 'middle',
+                    fontSize: 12,
+                    color:"#ffffff",
+                    backgroundColor :'#5b90c5',
+                    padding: [4, 5],
+                    borderRadius:5
+
+                },
+
+                leaves: {
+                    label: {
+                        position: 'bottom',
+                        //rotate: -90,
+                        verticalAlign: 'middle',
+                        align: 'middle'
+                    }
+                },
+                animationDurationUpdate: 750
+}]};
+
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}

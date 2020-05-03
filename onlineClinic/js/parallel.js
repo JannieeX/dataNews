@@ -41510,7 +41510,7 @@ color:'rgb(150, 139, 179)'
 },
 data: dataDown4
 },{
-name:"未注明医师",
+name:"未注明",
 type: 'parallel',
 lineStyle: {
 width: 0.8,
@@ -41553,7 +41553,7 @@ data: dataDown5
   },
   data: dataUp4
 },{
-  name:"未注明医师",
+  name:"未注明",
   type: 'parallel',
   lineStyle: {
       width: 0.8,

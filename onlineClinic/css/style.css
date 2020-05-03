@@ -17,8 +17,8 @@ div{
   /*
   border-style: double;
   border-color: red;
-  border-width: 2px;
-  */
+  border-width: 2px;*/
+
 }
 
 p {
@@ -272,6 +272,8 @@ h6 {
   color:#3d3a60;
   font-size:18px;
   font-weight:500;
+  line-height: 1.2;
+  margin: 0 0 5px 0;
 }
 
 .dbt{
@@ -468,12 +470,13 @@ h6 {
   }
 
 .author {
-  font-size: 7px;
+  font-size: 11px;
 }
 .about-img > h1 {
   font-size:14.5px;
-  font-weight:500;
-  color: #494949;
+  font-weight:600;
+  color:  #3f3c63;
+  line-height: 1.2;
 }
 .dbt{
   display: inline-block;

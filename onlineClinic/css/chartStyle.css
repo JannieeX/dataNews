@@ -12,6 +12,8 @@
   color:#3d3a60;
   font-size:18px;
   font-weight:500;
+  line-height: 1.2;
+  margin: 0 0 5px 0;
 }
 /*信息图数据说明格式*/
 .chart-exp {
@@ -31,8 +33,8 @@
   color:#7B7F83;
   font-size:11px;
   font-weight:200;
-  line-height: 1.5;
-  padding-top: 10px;
+  line-height: 1.2;
+ 
 }
 
 
@@ -60,7 +62,7 @@
   }
   
   .chart20{
-    width: 80px;
+    width: 300px;
     height:111px;
     position:relative;
     top:-469px;
@@ -78,11 +80,12 @@
     height:600px;
   }
   
-  .chart-tip{
+
+  #chart9{
     display: none;
   }
 
-  #chart9{
+  #chart10{
     display: none;
   }
 
@@ -98,15 +101,17 @@
   }
   
 
-  #chart8{
+  #chart10{
     height:600px;
   
   }
   /*信息图标题格式*/
   .Echart > h1 {
     font-size: 14.5px;
-    font-weight: 500;
-    color: #494949;
+    font-weight: 600;
+    color: #3f3c63;
+    line-height: 1.2;
+    margin: 0 0 5px 0;
   }
   /*信息图数据说明格式*/
   .chart-exp {
@@ -121,6 +126,11 @@
   #chart2{
     display: none;
   }
+
+  #chart8{
+    display: none;
+  }
+
   #chart9{
     height: 300px
   }
@@ -132,13 +142,14 @@
     Z-index:-1;
     font-size: 6px;
     color: #cccccc;
-    width: 200px;
+    width: 250px;
   }
   .chart22{
     left:100px; 
+    width: 140px;
   }
   .Echart2{
-    height: 350px;
+    height: 320px;
   }
 
 
