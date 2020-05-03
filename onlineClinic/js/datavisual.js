@@ -185,6 +185,9 @@ option = {
             //data: [1442, 1694, 2472, 1841],
             data: [1841, 2472, 1694, 1442],
             showBackground:true,
+            backgroundStyle:{
+                color :"#eeeeee"
+            },
             barWidth:"75%"
         },
         {
@@ -201,6 +204,11 @@ option = {
             },
             //data: [2762, 2861, 3646, 2718],
             data: [ 2718, 3646, 2861, 2762],
+            showBackground:true,
+            backgroundStyle:{
+                color :"#eeeeee"
+            },
+            barWidth:"75%"
 
         },
         {
@@ -216,6 +224,11 @@ option = {
             },
            // data: [9730,9898,11803,3679],
             data: [ 3679, 11803, 9898, 9730],
+            showBackground:true,
+            backgroundStyle:{
+                color :"#eeeeee"
+            },
+            barWidth:"75%"
         },
         {
             name: '一级医院',
@@ -231,6 +244,11 @@ option = {
             },
             //data: [11153,11246,14589,3679],
             data: [393,14589,11246,11153],
+            showBackground:true,
+            backgroundStyle:{
+                color :"#eeeeee"
+            },
+            barWidth:"75%"
         }
     ]
 };;
@@ -424,7 +442,10 @@ option = {
             //data: [1442, 1694, 2472, 1841],
             data: [1841, 2472, 1694, 1442],
             showBackground:true,
-            barWidth:"50%"
+            backgroundStyle:{
+                color :"#eeeeee"
+            },
+            barWidth:"50%",
         },
         {
             name: '三级医院',
@@ -441,6 +462,11 @@ option = {
             },
             //data: [2762, 2861, 3646, 2718],
             data: [ 2718, 3646, 2861, 2762],
+            showBackground:true,
+            backgroundStyle:{
+                color :"#eeeeee"
+            },
+            barWidth:"50%",
 
         },
         {
@@ -457,6 +483,11 @@ option = {
             },
            // data: [9730,9898,11803,3679],
             data: [ 3679, 11803, 9898, 9730],
+            showBackground:true,
+            backgroundStyle:{
+                color :"#eeeeee"
+            },
+            barWidth:"50%",
         },
         {
             name: '一级医院',
@@ -473,6 +504,11 @@ option = {
             },
             //data: [11153,11246,14589,3679],
             data: [393,14589,11246,11153],
+            showBackground:true,
+            backgroundStyle:{
+                color :"#eeeeee"
+            },
+            barWidth:"50%",
         }
     ]
 };;
