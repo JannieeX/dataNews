@@ -157,19 +157,28 @@ h6 {
   text-align: center;
 }
 
+@font-face {
+	font-family:'GB2312';
+	src: url('../font/GB2312.ttf') format('truetype');
+	font-weight: normal;
+                font-style: normal;
+}
+
 .row1> h1 {
-  font-family: PingFangSC-Regular, sans-serif;
+  font-family:GB2312;
   color: #3d3a60;
-  margin-bottom: 5px;
-  font-size: 45px;
+  margin-bottom: 10px;
+  font-size: 35px;
   font-weight: 400;
+  letter-spacing:5px;
 }
 .row1> h2 {
-  font-family: PingFangSC-Regular, sans-serif;
+  font-family: GB2312;
   color: #3d3a60;
-  margin-bottom: 5px;
-  font-size: 45px;
+  margin-bottom: 25px;
+  font-size: 35px;
   font-weight: 400;
+  letter-spacing:5px;
 }
 
 
@@ -434,26 +443,29 @@ h6 {
     margin:auto;
   }
  .row1{
-  padding-top: 10vh;
+  padding-top: 15vh;
  }
   .row1 >h1{
     font-size: 20px;
     line-height: 1.5;
     color:#3f3c63;
-    font-weight:500;
+    font-weight:400;
     margin: 0;
+    letter-spacing:1px;
   }
   .row1 >h2
   {
     font-size: 20px;
     line-height: 1.8;
     color:#3f3c63;
-    font-weight:500;
+    font-weight:400;
     margin: 0;
+    letter-spacing:1px;
   }
   .row1 >h3{
     color: #045799;
     font-size: 14px;
+    margin-bottom: 15px;
     
   }
 
