@@ -20,8 +20,20 @@
   color:#7B7F83;
   font-size:13px;
   font-weight:200;
-  line-height: 1.2;
+  line-height: 1;
 }
+
+.chart7-exp {
+ /*position: relative;
+ top:-20px;*/
+ margin-top: -35px;
+}
+
+.img-exp{
+  margin-top: 15px;
+}
+
+
 /*信息图图例*/
 .chart-legend{
   color:#494949;
@@ -50,10 +62,10 @@
   }
 
   #chart1{
-   /*width: 1200px;
-    height:450px;*/
+   width: 70vw;
+    height:450px;
     text-align:center;
-    margin: auto;
+    margin-left:-150px;
   }
 
   #chart2{
@@ -153,6 +165,8 @@
     height: 320px;
   }
 
-
+  #chart1{
+     margin-left:0px;
+   }
 
 }

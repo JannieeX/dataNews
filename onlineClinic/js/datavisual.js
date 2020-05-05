@@ -81,7 +81,7 @@ myChart.setOption(option = {
             name: '本稿数据来源平台',
             data: [data],
             top: '0%',
-            left: '20%',
+            left: '12%',
             bottom: '2%',
             right: '25%',
             symbolSize: 10,
