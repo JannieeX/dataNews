@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+        title : {
+        text: '各国女人产假对比图',
+        subtext: '',
+        x: 'center',
+        align: 'right'
+    },
+    grid: {
+        bottom: 150,
+        left: '10%',
+    },
+    toolbox: {
+        feature: {
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    tooltip : {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            animation: false,
+            label: {
+                backgroundColor: '#505765'
+            }
+        }
+    },
+    legend: {
+        data:['女人产假总周数', '女人带薪产假周数'],
+        bottom:50,
+    },
+    xAxis: {
+        data: ["法国","德国","西班牙","奥地利","挪威","瑞典","英国","日本","爱尔兰","澳大利亚","加拿大","新西兰","丹麦","意大利","希腊","芬兰","葡萄牙","荷兰","比利时","瑞士","中国","美国","新加坡"],
+        axisTick: {show: false},
+        // axisLabel: {
+        //     // formatter: 'barGap: \'-100%\''
+        // },
+        axisLabel: {  
+                   interval:0,  
+                   formatter:function(value)  
+                               {  
+                                   return value.split("").join("\n");  
+                               }    
+                } ,
+    },
+    yAxis: {
+        splitLine: {show: false}
+    },
+    animationDurationUpdate: 2000,
+    series: [{
+        name:'女人产假总周数',
+        type: 'bar',
+        itemStyle: {
+            normal: {
+                color: ''
+            }
+        },
+        silent: true,
+        barWidth: 10,
+        barGap: '-100%', // Make series be overlap
+        data: [ 162,162,156,112,90,85,65,58,56,52,52,52,50,48,47,44,30,29,28,14,14,12,12,]
+    }, {
+        name:'女人带薪产假周数',
+        type: 'bar',
+        barWidth: 10,
+        z: 10,
+        data: [20,42,16,16,38,40,12,26,22,0,29,14,19,25,34,29,17,16,15,11,14,0,8,]
+    }]
+};
+
+
+//动态切换
+var barGaps = ['10%', '-100%'];
+var loopIndex = 0;
+
+setInterval(function () {
+    var barGap = barGaps[loopIndex];
+
+    myChart.setOption({
+        xAxis: {
+            axisLabel: {
+                // formatter: 'barGap: \'' + barGap + '\''
+            }
+        },
+        series: [{
+            barGap: barGap
+        }]
+    });
+    loopIndex = (loopIndex + 1) % barGaps.length;
+
+}, 2000);;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+        title : {
+        text: '各国男人产假对比图',
+        subtext: '',
+        x: 'center',
+        align: 'right'
+    },
+    grid: {
+        bottom: 150,
+        left: '10%',
+    },
+    toolbox: {
+        feature: {
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    tooltip : {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            animation: false,
+            label: {
+                backgroundColor: '#505765'
+            }
+        }
+    },
+    legend: {
+        data:['男人产假总周数', '男人带薪产假周数'],
+        bottom:50,
+    },
+    xAxis: {
+        data: ["法国","西班牙","瑞典","挪威","意大利","比利时","英国","爱尔兰","希腊","荷兰","美国","德国","奥地利","芬兰","丹麦","新西兰","葡萄牙","澳大利亚","加拿大","日本","瑞士","中国"],
+        axisTick: {show: false},
+        // axisLabel: {
+        //     // formatter: 'barGap: \'-100%\''
+        // },
+        axisLabel: {  
+                   interval:0,  
+                   formatter:function(value)  
+                               {  
+                                   return value.split("").join("\n");  
+                               }    
+                } ,
+    },
+    yAxis: {
+        splitLine: {show: false}
+    },
+    animationDurationUpdate: 2000,
+    series: [{
+        name:'男人产假总周数',
+        type: 'bar',
+        itemStyle: {
+            normal: {
+                color: ''
+            }
+        },
+        silent: true,
+        barWidth: 10,
+        barGap: '-100%', // Make series be overlap
+        data: [156,156,78,60,22,15,15,14,14,13,12,8,4,4,2,2,1,0,0,0,0,0]
+    }, {
+        name:'男人带薪产假周数',
+        type: 'bar',
+        barWidth: 10,
+        z: 10,
+        data: [2,2,7,6,0,4,2,0,1,0,0,4,0,3,1,0,1,0,0,0,0,0]
+    }]
+};
+
+
+//动态切换
+var barGaps = ['10%', '-100%'];
+var loopIndex = 0;
+
+setInterval(function () {
+    var barGap = barGaps[loopIndex];
+
+    myChart.setOption({
+        xAxis: {
+            axisLabel: {
+                // formatter: 'barGap: \'' + barGap + '\''
+            }
+        },
+        series: [{
+            barGap: barGap
+        }]
+    });
+    loopIndex = (loopIndex + 1) % barGaps.length;
+
+}, 2000);;;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>

@@ -84,7 +84,7 @@ myChart.setOption(option = {
             left: '12%',
             bottom: '2%',
             right: '25%',
-            symbolSize: 10,
+            symbolSize: 11,
             initialTreeDepth:-1,
             edgeForkPosition:'50%',
             itemStyle:{
@@ -95,7 +95,9 @@ myChart.setOption(option = {
                 position: 'left',
                 verticalAlign: 'middle',
                 align: 'right',
-                fontSize:13
+                fontSize:20,
+                backgroundColor :'#ffffff'
+
             },
             leaves: {
                 label: {
@@ -235,7 +237,7 @@ option = {
             type: 'bar',
             stack: '总量',
             label: {
-                show: true,
+                show: false,
                 position: 'inside',
                 color:'#5b90c5'
             },
@@ -349,11 +351,11 @@ var option = {
                     //rotate: -90,
                     verticalAlign: 'middle',
                     align: 'middle',
-                    fontSize: 13,
+                    fontSize: 26,
                     color:"#ffffff",
                     backgroundColor :'#5b90c5',
-                    padding: [4, 5],
-                    borderRadius:5
+                    padding: [8, 10],
+                    borderRadius:10
 
                 },
 

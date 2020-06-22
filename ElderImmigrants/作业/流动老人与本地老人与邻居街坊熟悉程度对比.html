@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = null;
+    option = {
+    title: {
+    text: '流动老人与本地老人与邻居街坊熟悉程度对比'
+    },
+    tooltip: {},
+    legend: {
+        data: ['本地老人', '外地老人'],
+        bottom:50
+    },
+    radar: {
+    // shape: 'circle',
+    name: {
+    textStyle: {
+    color: '#fff',
+    backgroundColor: '#999',
+    borderRadius: 3,
+    padding: [3, 5]
+    }
+    //   lineStyle:[
+    //       {
+    //       name:'本地老人',
+    //       color:"green"
+    //   },
+    //   {
+    //       name:'外地老人',
+    //       color :"black"
+    //   }
+    //   ]
+    },
+    indicator: [
+    { name: '非常熟悉', max: 40},
+    { name: '比价熟悉', max: 40},
+    { name: '一般', max: 45},
+    { name: '不太熟悉', max: 20},
+    { name: '非常不熟悉', max: 6}
+    ]
+    },
+    series: [{
+    name: '本地老人 vs 外地老人',
+    type: 'radar',
+    //   itemStyle: {
+    //       normal: {areaStyle: {type: 'default'}},
+    
+    //   },
+    
+    data : [
+    {
+     value : [35.2,36.1,19.2,7.8,1.7],
+    name : '本地老人',
+    itemStyle:{
+        color:"rgb(9,102,102)"
+    },
+    lineStyle:{
+    color:"rgb(9,102,102)",
+    width:"3"
+    
+    }
+    },
+    {
+    value : [9.6,28.1,38.6,18.4,5.3],
+    name : '外地老人',
+    itemStyle:{
+        color:"#ffcc99"
+    },
+    lineStyle:{
+    color:"#ffcc99",
+    width:"3"
+    }
+    }
+    ]
+    }]
+    };;;;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+    title: {
+        text: '流动老人数量变化',
+        subtext:'（数量/百万人）',
+        left:'center',
+        
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'none'
+        },
+        formatter: function (params) {
+            return params[0].name + ': ' + params[0].value;
+        }
+    },
+    xAxis: {
+        data: ['2015', '2010', '2015' ],
+        axisTick: {show: false},
+        axisLine: {show: false},
+        axisLabel: {
+            textStyle: {
+                color: '#000000'
+            }
+        }
+    },
+    yAxis: {
+        splitLine: {show: false},
+        axisTick: {show: false},
+        axisLine: {show: false},
+        axisLabel: {show: false}
+    },
+    // color: ['#e54035'],
+     color: ['#e54035'],
+    series: [
+        {
+        name: 'hill',
+        type: 'pictorialBar',
+        barCategoryGap: '-130%',
+        color:"#006766",
+        // symbol: 'path://M0,10 L10,10 L5,0 L0,10 z',
+        symbol: 'path://M0,10 L10,10 C5.5,10 5.5,5 5,0 C4.5,5 4.5,10 0,10 z',
+        itemStyle: {
+            normal: {
+                opacity: 0.5
+            },
+            emphasis: {
+                opacity: 1
+            }
+        },
+        data: [8.469,9.344,18],
+        z: 10
+    }, 
+    {
+        data: [8.469,9.344,18],
+        type: 'line',
+        smooth:true,
+        color:"#dcd0a1",
+       label: {
+            show: true,
+            position: 'top',
+            formatter: '{b}\n{c}'
+        }
+    }]};;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>

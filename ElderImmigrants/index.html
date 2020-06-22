@@ -1,0 +1,952 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>1800万老人的漂流</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script type="text/javascript" src="assets/js/echarts.min.js"></script>
+		
+	</head>
+	<body class="is-preload" style="background-color: #f8f8f1">
+        <!-- 背景图pic0 -->
+       
+		 <div  style="background-color: #f8f8f1">
+            <img src="images/pic0 .png" style="width:100%;height: 100%" alt="" />
+             <div class="triangle"> </div>
+            <h2 style="color: #123334; position: absolute;top:25%;left:60%;font-size: 100px;font-family: TypeLand KhangXi Dict Demo">1800万<br>老人的漂流</h2>
+            <div class="triangle" style="font-color:black"></div>
+       
+		<!-- Page Wrapper -->
+       <!--  <section id="banner">
+			<div id="page-wrapper"> -->
+				<!-- Header -->
+					<!-- <header id="header" class="alt" >
+						<h1 style="color:#f8f8f1;">1800万的漂流</h1>
+					</header>
+            </div>
+        </section> -->
+   				<!-- Banner -->
+					<!-- <section id="banner" style="background-color: #f8f8f1">
+						<div class="inner">
+							<div class="logo"><span class="icon fa-diamond"></span></div>
+							<h2 style="color: #0b393d;background-color: #f8f8f1">1800万的漂流</h2>
+						</div>
+					</section>
+                 -->
+				<!-- Wrapper -->
+					<section id="wrapper" style="background-color: #f8f8f1">
+
+						<!-- One 导语 -->
+							<section id="one" class="wrapper spotlight style3" style="background-color: #f8f8f1;">
+								<div class="inner" style="background-color: #f8f8f1">
+									<div class="content">
+										<p style="font-family: SimSun">提到流动人口，你会想到什么？为梦想打拼的年轻人？还是外地务工养家糊口的农民？</p>
+            							<p>在聚光灯未照到的地方，还有这样一群流动群体——已是花甲之年，却漂泊在外地，他们因远离故土在外漂泊而被媒体称为“老漂族”，又因语言习惯、人际关系等原因，鲜少出户而被称为“都市中的隐形人”。</p>
+            							<p>在未来，这些人或许会是你的父母，或许会是你。</p>
+									</div>
+								</div>
+							</section>
+
+						<!-- Two 图片pic07 -->
+							<section id="two" class="wrapper alt spotlight style2" style="background-color: #f8f8f1">
+								<div class="trapezoid"> </div> 
+                                  <img src="images/pic07.jpg" style="width:100%" alt="" />
+                                <div class="triangle"> </div>
+							</section>
+
+						<!-- Three 第一部分 -->
+							<section id="three" class="wrapper spotlight style3" style="background-color: #f8f8f1">
+                                <div class="inner">
+                                <!-- <div class="wrapper spotlight style3"> -->
+									<div class="content">
+										<h1 style="color: #0b393d;background-color: #f8f8f1">1/12.3</h1>
+										<h3 class="major">每12.3个老人里，就有1个流动老人</h2>
+										<p>截至2015年，全国2.47亿流动人口中，有高达7.2%的是60岁以上的老人，总人数达到1800万人，多于成都的常住人口数量，也相当于，12.3个老人里，就有1个是流动老人。</p>
+	
+										<p>《2016中国流动人口发展报告》显示，在流动老人中，男性略多于女性；以低龄老人为主，70岁以下的流动老人约占八成；流动老人大都来自农村，约占七成；在流动老人中，受教育程度以小学为主，约占41%。四川目前是流动老人的第一来源大省，其次是广东、安徽和贵州。</p>
+										<p>
+										值得注意的是，流动老人数量在15年间呈现出了惊人的增长。国家计生委分析，在中国人口老龄化趋势和人口流动的家庭化进程的共同影响下，流动老人数量的不断增长将是大势所趋。</p>
+									 <div id="container1" style="height: 500%;width: 100%"></div>
+                                            <script type="text/javascript">
+                                            var dom = document.getElementById("container1");
+                                            var myChart = echarts.init(dom);
+                                            var app = {};
+                                            option = null;
+                                            option = {
+                                                title: {
+                                                    text: '流动老人数量变化',
+                                                    subtext:'数据来源：《2016中国流动人口发展报告》',
+                                                    left:'center',
+                                                    
+                                                },
+                                                tooltip: {
+                                                    trigger: 'axis',
+                                                    axisPointer: {
+                                                        type: 'none'
+                                                    },
+                                                    formatter: function (params) {
+                                                        return params[0].name + ': ' + params[0].value;
+                                                    }
+                                                },
+                                                xAxis: {
+                                                    data: ['2005', '2010', '2015' ],
+                                                    axisTick: {show: false},
+                                                    axisLine: {show: false},
+                                                    axisLabel: {
+                                                        textStyle: {
+                                                            color: '#000000'
+                                                        }
+                                                    }
+                                                },
+                                                yAxis: {
+                                                	// name:'百万人',
+
+                                                    splitLine: {show: false},
+                                                    axisTick: {show: false},
+                                                    axisLine: {show: false},
+                                                    axisLabel: {show: false}
+                                                },
+                                                // color: ['#e54035'],
+                                                 color: ['#e54035'],
+                                                series: [
+                                                    {
+                                                    name: 'hill',
+                                                    type: 'pictorialBar',
+                                                    barCategoryGap: '-130%',
+                                                    color:"#006766",
+                                                    // symbol: 'path://M0,10 L10,10 L5,0 L0,10 z',
+                                                    symbol: 'path://M0,10 L10,10 C5.5,10 5.5,5 5,0 C4.5,5 4.5,10 0,10 z',
+                                                    itemStyle: {
+                                                        normal: {
+                                                            opacity: 0.5
+                                                        },
+                                                        emphasis: {
+                                                            opacity: 1
+                                                        }
+                                                    },
+                                                    data: [8.469,9.344,18],
+                                                    z: 10
+                                                }, 
+                                                {
+                                                    data: [8.469,9.344,18],
+                                                    type: 'line',
+                                                    smooth:true,
+                                                    color:"#dcd0a1",
+                                                   label: {
+                                                        show: true,
+                                                        position: 'top',
+                                                        formatter: "{b}\n{c}百万元"
+                                                    }
+                                                }]};;
+                                            if (option && typeof option === "object") {
+                                                myChart.setOption(option, true);
+                                            }
+                                                   </script>
+									</div>
+								</div>
+							</section>
+							<!-- 插入图片pic08 -->
+						  <!-- <section id="five" class="wrapper alt spotlight style2" style="background-color: #f8f8f1">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+									<div class="content">
+										
+									</div>
+								</div>
+							</section> -->
+                            <!-- 插入图片pic08 -->
+                            <section id="five" class="wrapper alt spotlight style2" style="background-color: #f8f8f1">
+                                <div class="trapezoid"> </div> 
+                                  <img src="images/pic08 .jpg" style="width:100%" alt="" />
+                                <div class="triangle"> </div>
+                            </section>
+
+
+						<!-- 第二部分-->
+						<section id="three" class="wrapper spotlight style3" style="background-color: #f8f8f1">
+
+								<div class="inner">
+									<div class="content">
+					
+                                        <section class="features">
+                                        <article>
+                                            <h1>43%</h1>
+                                            <h3 class="major">接近半数老人为照顾晚辈流动</h3>
+                                        <p>杜大爷是地道的北京人。每天早晨，他都会到兴隆公园里散步，对公园里的情况了如指掌。他说他可以从外表就看出一个老人是不是本地的：“我跟你们讲，这么大把年纪还来北京，都是为了来照顾你们这些年轻人的小孩的。”2015年国家卫生计生委流动老人健康服务专题调查显示，照顾晚辈、养老与就业构成老人流动的三大原因。其中，照顾晚辈的比例高达43%，为与子女团聚或自行异地养老的比例为25%，23%的流动老人是因务工经商而流动。</p>
+                                        </article>
+                                        <article style="height: 500%">
+                        <div id="container2" style="height: 350%;width: 130%"></div>
+                                         <script type="text/javascript">
+                                                var dom = document.getElementById("container2");
+                                                var myChart = echarts.init(dom);
+                                                var app = {};
+                                                option = null;
+                                                option = {
+                                                    title : {
+                                                        text: '流动老人流动原因',
+                                                        subtext:'数据来源：《2016中国流动人口发展报告》',
+                                                        x:'center'
+                                                    },
+                                                    tooltip : {
+                                                        trigger: 'item',
+                                                        formatter: "{a} <p/>{b} : {c} ({d}%)"
+                                                    },
+                                                    legend: {
+                                                        x : 'center',
+                                                        y : 'bottom',
+                                                        data:['照料子孙','养老','务工经商','其他']
+                                                    },
+                                                    toolbox: {
+                                                        show : true,
+                                                        feature : {
+                                                            mark : {show: true},
+                                                            dataView : {show: false, readOnly: false},
+                                                            magicType : {
+                                                                show: true,
+                                                                type: ['pie', 'funnel']
+                                                            },
+                                                            restore : {show: false},
+                                                            saveAsImage : {show: false}
+                                                        }
+                                                    },
+                                                    calculable : false,
+                                                    series : [
+                                                        
+                                                        {
+                                                            name:'流动原因',
+                                                            type:'pie',
+                                                            radius : [30, 110],
+                                                            center : ['50%', '50%'],
+                                                            roseType : 'area',
+                                                            data:[
+                                                                
+                                                                
+                                                                {value:4572000, name:'养老'},
+                                                               
+                                                                {value:4050000, name:'务工经商'},
+                                                                {value:7740000, name:'照料子孙'},
+                                                                {value:1638000, name:'其他'}
+                                                            ],
+                                                            itemStyle: {
+                                                                                normal: {
+                                                                                    color: function(params) {
+                                                                                        var colorList = [
+                                                                                          '#c0b283','#dcd0c0','#006766','#dcd0a1'
+                                                                                        ];
+                                                                                        return colorList[params.dataIndex]
+                                                                                    },
+                                                                                 },
+                                                                        }
+                                                        }
+                                                    ]
+                                                };
+                                                ;;
+                                                if (option && typeof option === "object") {
+                                                    myChart.setOption(option, true);
+                                                }
+                                                       </script>
+                                        </article>
+                                </section>
+										
+										<p>62岁的梅阿姨就是为了照顾晚辈，只身一人从一千多公里外的武汉只身来到北京。她来北京半年，怀里的小孩半岁大。婴儿一不顺心便会开始哭闹，她一只手托着孩子，一只手变戏法似地从婴儿车里掏出纸巾、小玩具、手机，给婴儿擦口水、放音乐、逗他开心。广场舞的音乐声响起，原本在哭闹的宝宝立刻安静下来，安然入睡，梅姨轻轻把他放进婴儿车，扭头笑着说“他就喜欢公园里的音乐，每天早晨都带他来。”</p>
+										<div> 梅阿姨图片</div>
+										<p>繁忙的工作、短暂的产假，让大多数人难以腾出更多的时间，无法照顾小孩。</p>
+										<div id="container3" style="height: 500%;width: 100%"></div>
+										       <script type="text/javascript">
+                                                    var dom = document.getElementById("container3");
+                                                    var myChart = echarts.init(dom);
+                                                    var app = {};
+                                                    option = null;
+                                                    option = {
+                                                        title : {
+                                                            text: '各国产假对比图',
+                                                            subtext:'数据来源-新华网：世界各国产假大不同!',
+                                                            x: 'center',
+                                                            align: 'right'
+                                                        },
+                                                        grid: {
+                                                            bottom: 150,
+                                                            left: '20%',
+                                                            right:'20%'
+                                                        },
+                                                        toolbox: {
+                                                            feature: {
+                                                                dataZoom: {
+                                                                    yAxisIndex: 'none'
+                                                                },
+                                                                restore: {},
+                                                                saveAsImage: {}
+                                                            }
+                                                        },
+                                                        tooltip : {
+                                                            trigger: 'axis',
+                                                            axisPointer: {
+                                                                type: 'cross',
+                                                                animation: false,
+                                                                label: {
+                                                                    backgroundColor: '#505765'
+                                                                }
+                                                            }
+                                                        },
+                                                        legend: {
+                                                            data:['女人产假总周数', '女人带薪产假周数','男人产假总周数', '男人带薪产假周数'],
+                                                            bottom:50,
+                                                        },
+                                                        xAxis : [
+                                                            {
+                                                                type : 'category',
+                                                                boundaryGap : true,
+                                                                axisLine: {onZero: false},
+                                                                axisLabel: {  
+                                                                       interval:0,  
+                                                                       formatter:function(value)  
+                                                                                   {  
+                                                                                       return value.split("").join("\n");  
+                                                                                   }    
+                                                                    } ,
+                                                                data : [
+                                                                  "法国","德国","西班牙","奥地利","挪威","瑞典","英国","日本","爱尔兰","新西兰","加拿大","澳大利亚","丹麦","意大利","希腊","芬兰","葡萄牙","荷兰","比利时","中国","瑞士","新加坡","美国"]
+                                                                  .map(function (str) {
+                                                                    return str.replace(' ', '\n')
+                                                                })
+                                                            }
+                                                        ],
+                                                        yAxis: [
+                                                            {
+                                                                name: '周数',
+                                                                type: 'value',
+                                                                max: 318,
+                                                                
+                                                            },
+                                                            {
+                                                                name: '周数',
+                                                                // nameLocation: 'start',
+                                                                max: 318,
+                                                                type: 'value',
+                                                                inverse: true
+                                                            }
+                                                        ],
+                                                         dataZoom: [
+                                                            {
+                                                                show: true,
+                                                                realtime: true,
+                                                                start: 0,
+                                                                end: 100
+                                                            },
+                                                            {
+                                                                type: 'inside',
+                                                                realtime: true,
+                                                                start: 65,
+                                                                end: 85
+                                                            }
+                                                        ],
+                                                        series: [
+                                                            {
+                                                            name:'女人产假总周数',
+                                                            animation: true,
+                                                            type: 'bar',
+                                                            markArea: {
+                                                                    // silent: false,
+                                                                    itemStyle:{
+                                                                        color :'rgb(144,144,144,0.3)'
+                                                                    },
+                                                                    data: [[{
+                                                                        xAxis: '比利时'
+                                                                    }, {
+                                                                        xAxis: '瑞士'
+                                                                    }]]
+                                                                },
+                                                            itemStyle: {
+                                                                normal: {
+                                                                    color: '#006768'
+                                                                    // color:'#eb726f'
+                                                                }
+                                                            },
+                                                            silent: true,
+                                                            barWidth: 10,
+                                                            barGap: '-100%', // Make series be overlap
+                                                            data: [162,162,156,112,90,85,65,58,56,52,52,52,50,48,47,44,30,29,28,14,14,12,12]
+                                                        }, {
+                                                            name:'女人带薪产假周数',
+                                                            animation: true,
+                                                            type: 'bar',
+                                                            barWidth: 10,
+                                                            z: 10,
+                                                            itemStyle: {
+                                                                normal: {
+                                                                    // color: '#023'
+                                                                    color:'#023435'
+                                                                }
+                                                            },
+                                                            data: [20,42,16,16,38,40,12,26,22,14,29,0,19,25,34,29,17,16,15,14,11,8,0]
+                                                     },
+                                                    {
+                                                            name:'男人产假总周数',
+                                                            yAxisIndex:1,
+                                                            type: 'bar',
+                                                            itemStyle: {
+                                                                normal: {
+                                                                    
+                                                                    color:'#dfd55d'
+                                                                }
+                                                            },
+                                                            silent: true,
+                                                            barWidth: 10,
+                                                            barGap: '-100%', // Make series be overlap
+                                                            data: [156,8,156,4,60,78,15,0,14,2,0,0,2,22,14,4,1,13,15,2,0,2,12]
+                                                        }, 
+                                                        {
+                                                            name:'男人带薪产假周数',
+                                                            yAxisIndex:1,
+                                                            type: 'bar',
+                                                            barWidth: 10,
+                                                            z: 10,
+                                                            itemStyle: {
+                                                                normal: {
+                                                                    
+                                                                    color:'#f5c464'
+                                                                }
+                                                            },
+                                                            data: [2,4,2,0,6,7,2,0,0,0,0,0,1,0,1,3,1,0,4,2,0,2,0]
+                                                        },
+                                                        ]
+                                                    };
+                                                    ;;
+                                                    if (option && typeof option === "object") {
+                                                        myChart.setOption(option, true);
+                                                    }
+                                                           </script>
+										<p>城市高额的保姆费用让部分白领望而却步，即使能够承担，也始终难以让人放心。而祖辈父母似乎便成为了“物美价廉”的选择——不需要工资，足够尽心。</p>
+										<div id="container4" style="height: 500%;width: 100%"></div>
+                                         <script type="text/javascript">
+                                                var dom = document.getElementById("container4");
+                                                var myChart = echarts.init(dom);
+                                                var app = {};
+                                                option = null;
+                                                option = null;
+                                                app.title = '气泡图';
+
+                                                var data = [
+                                                    [['北京',5183,'保姆月平均工资'],['广州',5164,'保姆月平均工资'],['上海',6367,'保姆月平均工资'],['天津',6178,'保姆月平均工资'],['成都',6402,'保姆月平均工资'],['大连',6144,'保姆月平均工资'],['深圳',8315,'保姆月平均工资'],['长沙',6186,'保姆月平均工资'],['重庆',6584,'保姆月平均工资'],['青岛',6057,'保姆月平均工资'],['郑州',6191,'保姆月平均工资'],['武汉',6331,'保姆月平均工资'],['南京',6680,'保姆月平均工资'],['杭州',7330,'保姆月平均工资'],['西安',5872,'保姆月平均工资'],['佛山',7017,'保姆月平均工资'],['东莞',6998,'保姆月平均工资']],
+                                                    [['北京',9240,'居民月平均工资'],['广州',7409,'居民月平均工资'],['上海',8962,'居民月平均工资'],['天津',5451,'居民月平均工资'],['成都',4867,'居民月平均工资'],['大连',4291,'居民月平均工资'],['深圳',5258,'居民月平均工资'],['长沙',3841,'居民月平均工资'],['重庆',4150,'居民月平均工资'],['青岛',5833,'居民月平均工资'],['郑州',4500,'居民月平均工资'],['武汉',4167,'居民月平均工资'],['南京',5307,'居民月平均工资'],['杭州',6000,'居民月平均工资'],['西安',4267,'居民月平均工资'],['佛山',5358,'居民月平均工资'],['东莞',5083,'居民月平均工资']]
+                                                ];
+
+                                                option = {
+                                                   
+                                                    title: {
+                                                        text: '各省保姆月平均工资与居民月平均工资对比',
+                                                        subtext:'数据来源：无忧保姆网',
+                                                        left:'center',
+                                                    },
+                                                    legend: {
+                                                        // right: 10,
+                                                        data: ['保姆月平均工资', '居民月平均工资'],
+                                                        bottom:0
+                                                    },
+                                                    xAxis: {
+                                                        splitLine: {
+                                                            lineStyle: {
+                                                                type: 'dashed'
+                                                            }
+                                                        },
+                                                        data: ['北京','广州','上海','天津','成都','大连','深圳','长沙','重庆','青岛','郑州','武汉','南京','杭州','西安','佛山','东莞'],
+                                                    },
+                                                    yAxis: {
+                                                    	name:'万元',
+                                                        splitLine: {
+                                                            lineStyle: {
+                                                                type: 'dashed'
+                                                            }
+                                                        },
+                                                        scale: true,
+                                                        min: 0,
+                                                        max: 10000
+                                                    },
+                                                    series: [
+                                                    {
+                                                            name:'bai',
+                                                            type:'bar',
+                                                            barWidth: '2',
+                                                            barGap:'-100%',
+                                                            itemStyle: {
+                                                            normal: {
+                                                                color: '#ffcc99'
+                                                            }
+                                                        },
+                                                            data:[5183,5164,6367,6178,6402,6144,8315,6186,6584,6057,6191,6331,6680,7330,5872,7017,6998]
+                                                        },
+                                                         {
+                                                            name:'le1',
+                                                            type:'bar',
+                                                            barWidth: '2',
+                                                            barGap:'-100%',
+                                                            itemStyle: {
+                                                            normal: {
+                                                                color: '#ffcc99'
+                                                            }
+                                                        },
+                                                            data:[5183,5164,6367,,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                                        },
+                                                        {
+                                                            name:'tian',
+                                                            type:'bar',
+                                                            barWidth: '2',
+                                                            // barGap:'-100%',
+                                                            itemStyle: {
+                                                            normal: {
+                                                                color: 'green'
+                                                            }
+                                                        },
+                                                            data:[9240,7409,8962,5451,4867,4291,5258,3841,4150,5833,4500,4167,5307,6000,4267,5358,5083]
+                                                        },
+                                                                 {
+                                                            name:'le1',
+                                                            type:'bar',
+                                                            barWidth: '2',
+                                                            barGap:'-100%',
+                                                            itemStyle: {
+                                                            normal: {
+                                                                color: '#ffcc99'
+                                                            }
+                                                        },
+                                                            data:[5183,5164,6367,,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                                        },
+                                                    {
+                                                        name: '保姆月平均工资',
+                                                        data: data[0],
+                                                        type: 'scatter',
+                                                        label: {
+                                                            emphasis: {
+                                                                show: true,
+                                                                formatter: function (param) {
+                                                                    return param.data[1];
+                                                                },
+                                                                position: 'top'
+                                                            }
+                                                        },
+                                                        itemStyle: {
+                                                            normal: {
+                                                                shadowBlur: 10,
+                                                                shadowColor: 'rgba(120, 36, 50, 0.5)',
+                                                                // shadowColor:'#DCD0C0',
+                                                                shadowOffsetY: 5,
+                                                                color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
+                                                                    offset: 0,
+                                                                    color: '#ffcc99'
+                                                                }, {
+                                                                    offset: 1,
+                                                                    color: '#ffcc99'
+                                                                }])
+                                                            }
+                                                        }
+                                                    }, {
+                                                        name: '居民月平均工资',
+                                                        data: data[1],
+                                                        type: 'scatter',
+                                                        label: {
+                                                            emphasis: {
+                                                                show: true,
+                                                                formatter: function (param) {
+                                                                    return param.data[1];
+                                                                },
+                                                                position: 'top'
+                                                            }
+                                                        },
+                                                        itemStyle: {
+                                                            normal: {
+                                                                
+                                                                color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
+                                                                    offset: 0,
+                                                                    color: 'green'
+                                                                }, {
+                                                                    offset: 1,
+                                                                    color: 'green'
+                                                                }])
+                                                            }
+                                                        }
+                                                      
+                                                    }
+                                                        
+                                                    ]
+                                                };;;
+                                                if (option && typeof option === "object") {
+                                                    myChart.setOption(option, true);
+                                                }
+                                                       </script>
+										<p>就这样，在本该颐养天年的年纪，774万老人长途跋涉，来到儿女的城市，为了儿女为了孙辈，做起“保姆”的工作。“我是在燃烧我最后的光和热，做出点贡献。”梅阿姨这样说。</p>
+										  
+
+									</div>
+								</div>
+                                
+							</section>
+
+						<!--插入一张图片pic10-->
+                            <section id="two" class="wrapper alt spotlight style2" style="background-color: #f8f8f1">
+                                <div class="trapezoid"> </div> 
+                                  <img src="images/pic10.jpg" style="width:100%" alt="" />
+                                <div class="triangle"> </div>
+                            </section>	
+						
+
+						<!--第三部分-->
+						<section id="one" class="wrapper spotlight style1" style="background-color: #f8f8f1">
+								<div class="inner">
+									<!--<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>-->
+									<div class="content">
+									<h1 >41%</h1>
+										<h3 class="major">大量流动老人难以融入当地社区</h2>
+										<p>老人迁移到陌生的城市，如同被“连根拔起”，心理的孤独难以消解，真正实现“嫁接”需要漫长的过程。
+										<p>首先，在与当地居民的交往方面，流动老人面临着诸多困难。
+										经过对中国综合社会调查数据的分析，可以看到，有41%的流动老人一年仅与邻居进行几次社交娱乐活动，甚至从来没有过。23.7%流动老人表示对邻居不甚熟悉，仅有9.6%的流动老人认为自己对邻居非常熟悉。</p>
+									<section class="features" style="width: 100%;align-items: center">
+                                        <article>
+                                            <div id="container5" style="height: 500%;width: 100%"></div>
+                                         <script type="text/javascript">
+                                            var dom = document.getElementById("container5");
+                                            var myChart = echarts.init(dom);
+                                            var app = {};
+                                            option = null;
+                                            option = {
+                                                title: {
+                                                    text: '您与邻居进行社交娱乐活动的频繁程度',
+                                                    subtext:'数据来源：中国家庭追踪调查（CFPS）',
+                                                    left:'center',
+                                                },
+                                                tooltip: {},
+                                                legend: {
+                                                    data: ['本地老人', '外地老人'],
+                                                    bottom:30,
+                                                },
+                                                radar: {
+                                                    // shape: 'circle',
+                                                    name: {
+                                                        textStyle: {
+                                                            color: '#fff',
+                                                            backgroundColor: '#999',
+                                                            borderRadius: 3,
+                                                            padding: [3, 5]
+                                                       }
+                                                    //   lineStyle:[
+                                                    //       {
+                                                    //       name:'本地老人',
+                                                    //       color:"green"
+                                                    //   },
+                                                    //   {
+                                                    //       name:'外地老人',
+                                                    //       color :"black"
+                                                    //   }
+                                                    //   ]
+                                                    },
+                                                    indicator: [
+                                                       { name: '从来不', max: 30},
+                                                       { name: '一年1次或更少', max: 30},
+                                                       { name: '一年几次', max: 30},
+                                                       { name: '大约一个月1次', max: 30},
+                                                       { name: '一个月几次', max: 30},
+                                                       { name: '一周1到2次', max: 30},
+                                                       { name: '几乎每天', max: 30}
+                                                    ]
+                                                },
+                                                series: [{
+                                                    name: '本地老人 vs 外地老人',
+                                                    type: 'radar',
+                                                //   itemStyle: {
+                                                //       normal: {areaStyle: {type: 'default'}},
+                                                       
+                                                //   },
+                                                   
+                                                    data : [
+                                                        {
+                                                            value : [26.1, 22.9, 16.2, 6.8, 10.4, 10.1, 7.5],
+                                                            name : '本地老人',
+                                                            itemStyle:{
+                                                                color:"rgb(9,102,102)"
+                                                            },
+                                                           lineStyle:{
+                                                            color:"rgb(9,102,102)",
+                                                            width:"3"
+                                                            
+                                                            }
+                                                        },
+                                                         {
+                                                            value : [14.6, 23, 13.5, 7.9, 13.5, 14.6, 12.9],
+                                                            name : '外地老人',
+                                                            itemStyle:{
+                                                                color:"#ffcc99"
+                                                            },
+                                                            lineStyle:{
+                                                            color:"#ffcc99",
+                                                            width:"3"
+                                                            }
+                                                        }
+                                                    ]
+                                                }]
+                                            };;;;
+                                            if (option && typeof option === "object") {
+                                                myChart.setOption(option, true);
+                                            }
+                                                   </script>
+                                        </article>
+                                        <article>
+                                            <div id="container6" style="height: 500%;width: 100%"></div>
+                                         <script type="text/javascript">
+                                                var dom = document.getElementById("container6");
+                                                var myChart = echarts.init(dom);
+                                                var app = {};
+                                                option = null;
+                                                option = null;
+                                                    option = {
+                                                    title: {
+                                                    text: '流动老人与本地老人与邻居街坊熟悉程度对比',
+                                                    subtext:'数据来源：中国家庭追踪调查（CFPS）',
+                                                    left:'center',
+                                                    },
+                                                    tooltip: {},
+                                                    legend: {
+                                                        data: ['本地老人', '外地老人'],
+                                                        bottom:30
+                                                    },
+                                                    radar: {
+                                                    // shape: 'circle',
+                                                    name: {
+                                                    textStyle: {
+                                                    color: '#fff',
+                                                    backgroundColor: '#999',
+                                                    borderRadius: 3,
+                                                    padding: [3, 5]
+                                                    }
+                                                    //   lineStyle:[
+                                                    //       {
+                                                    //       name:'本地老人',
+                                                    //       color:"green"
+                                                    //   },
+                                                    //   {
+                                                    //       name:'外地老人',
+                                                    //       color :"black"
+                                                    //   }
+                                                    //   ]
+                                                    },
+                                                    indicator: [
+                                                    { name: '非常熟悉', max: 40},
+                                                    { name: '比较熟悉', max: 40},
+                                                    { name: '一般', max: 45},
+                                                    { name: '不太熟悉', max: 20},
+                                                    { name: '非常不熟悉', max: 6}
+                                                    ]
+                                                    },
+                                                    series: [{
+                                                    name: '本地老人 vs 外地老人',
+                                                    type: 'radar',
+                                                    //   itemStyle: {
+                                                    //       normal: {areaStyle: {type: 'default'}},
+                                                    
+                                                    //   },
+                                                    
+                                                    data : [
+                                                    {
+                                                     value : [35.2,36.1,19.2,7.8,1.7],
+                                                    name : '本地老人',
+                                                    itemStyle:{
+                                                        color:"rgb(9,102,102)"
+                                                    },
+                                                    lineStyle:{
+                                                    color:"rgb(9,102,102)",
+                                                    width:"3"
+                                                    
+                                                    }
+                                                    },
+                                                    {
+                                                    value : [9.6,28.1,38.6,18.4,5.3],
+                                                    name : '外地老人',
+                                                    itemStyle:{
+                                                        color:"#ffcc99"
+                                                    },
+                                                    lineStyle:{
+                                                    color:"#ffcc99",
+                                                    width:"3"
+                                                    }
+                                                    }
+                                                    ]
+                                                    }]
+                                                    };;;;
+                                                if (option && typeof option === "object") {
+                                                    myChart.setOption(option, true);
+                                                }
+                                                       </script>        
+                                        </article>
+                                    </section>
+                                        
+										
+										<p>王奶奶的生活就是如此。这些年，65岁的她奔波在内蒙古和河北的两座城市间，先是帮女儿把大孙子带大，然后去帮儿子带几年孙子，再回来帮女儿带二孙子。早早起来出门买菜，在孩子们起床之前就准备好早餐，一整天，王奶奶一个人在家照顾着孙子，整理家务，匆匆忙忙又到了预备午饭和晚饭的时间。从卧室到客厅，从客厅到厨房，日复一日。这些年她几乎从不出门，一是因为身处外地，没什么认识人，二是因为家务事太多、照看小孩抽不开身。王奶奶说，自己有一些感情很好的朋友，但已经两年没有和大家聚过会了。如果儿女开车带自己去广场公园溜达一圈，就跟着出去转转，如果儿女不带，就不出门。
+										<p>
+										在“少子化”的家庭结构成为常态的中国，像梅奶奶这样的老人有很多。他们被从原有的社会关系网络中抽离出来，承担起日常家务，照顾后辈的生活起居，自己的闲暇时间很少，局限了对社交活动的参与。此外，流动老人可能存在语言障碍，如果流入地与流出地的人文环境差异大，就更难适应；受到户籍制度的影响，流动老人不能享受本地居民的部分待遇，心理上存在弱势，进一步削弱了心理融入动机。
+										<p>
+										梅奶奶虽然不存在语言障碍，也从不需要去医院，但却始终存在着无法适应北京环境的问题。回忆起在老家武汉的生活，梅姨翻起手机里的照片，眼睛里放出光来。在北京的半年里，她并不快乐。她总是说北京不好，若有人问哪里不好，她就摇头摆手，“哪儿都不好！”若是再追问，她就火冒三丈起来，把气候、交通、环境…全都数落一通。她经常翻着手机里的照片，回忆着在武汉的生活，眼睛里闪烁着光芒。她有点激动地说，“我们武汉，大街都干干净净，空气湿润，从来没有沙尘暴，你走在街上司机都停下来给你让路呢，也从来没见谁占用盲道……谁愿意来北京给别人带孩子啊，我在武汉的小伙伴天天催我回去一起打牌，‘老梅，你快回来吧，没你不好玩儿啊！’”
+										<p>
+										其实，像王奶奶、梅奶奶这样无法适应流入地环境的中国老人，不仅在国内各省有很多，大洋彼岸也有许多，他们承受着更大的孤独。梅奶奶曾经在美国生活了半年，也是去帮亲戚带孩子。在美国的日子里，人生地不熟，又担心枪支安全等问题，她白天始终独自在家里待着带孩子，谁来了都不敢开门。她说，那里有许多中国父母，去帮自己的子女带孩子。受限于签证时间，一个老人最多只能在那里待半年，就要回国。再加上美国的生活成本较高，许多子女选择了让父母轮流出国。前半年老父亲在异国他乡哄着孙子，老母亲在国内独自过日子，后半年又换过来，这样的生活要持续好几年。她叹了口气：“到了美国真想回中国，到了中国真想回武汉。还是家好啊，在美国最想念的，就是我们武汉的小龙虾。”</p>	
+										<!--<a href="#" class="special">Learn more</a>-->
+									</div>
+								</div>
+							</section>
+							<!--插入一张图片pic09-->
+                            <section id="two" class="wrapper alt spotlight style2" style="background-color: #f8f8f1">
+                                <div class="trapezoid"> </div> 
+                                  <img src="images/pic09.jpg" style="width:100%" alt="" />
+                                <div class="triangle"> </div>
+                            </section>
+						<!-- <section id="five" class="wrapper alt spotlight style2" style="background-color: #f8f8f1">
+								<div class="inner">
+									<img src="images/pic09.jpg" alt="" />
+									
+								</div>
+							</section> -->
+						<!--第四部分-->
+						<section id="one" class="wrapper spotlight style1" style="background-color: #f8f8f1">
+								<div class="inner">
+									<!--<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>-->
+									<div class="content">
+									<h1>69% ↓ </h1>
+										<h2 class="major">表面团圆 背后孤独</h2>
+										<p>在与子女家庭交往的过程中，流动老人亦有寄居感。</p>
+										<p>在对中国追踪调查数据进行分析后发现，伴侣成为了流动老人的主要聊天对象，而即使和儿女生活在一个屋檐下，也很少有调查者与儿女聊天最多。</p>
+										<p>王奶奶的儿女们秉持着传统观念，执意让寡居多年的老母亲与自己同住。王奶奶没有自己的房子，常年在孩子们家中轮流居住。有时候，王奶奶觉得和孩子们住不惯，两代人观念不同，自己有时候觉得不自在。她很想念老家的朋友，也曾想过自己租房子住，但因为不想让儿女花钱，她的念头总是很快作罢。而且已经这样生活多年，她也不想改变现状了。</p>
+										<p>根据发表在《中国老年学杂志》的论文《老年流动人口城市适应性的社会学分析》，没来子女家生活之前，69%的老人对于在子女家生活持比较乐观的预期，认为能够和“有了出息”的子女愉快共处，约23%的老人愿意在城市子女家养老。但是在子女家居住过一段时间之后，上述两项比例明显降低。</p>
+										<p>在亲友和家人眼中，王奶奶总是慈祥地笑着。当被问到如何维护和谐的家庭关系时，她感叹道：“他们不吃的咱吃，他们不做的咱做，这样能有啥矛盾呢？”有时候看不惯子女睡懒觉等行为，王奶奶总会宽慰自己时代在变，也会提醒自己不要过多干涉儿女的家庭。</p>
+										<p>不止王奶奶，其实家庭关系的微妙调整，正发生在千千万万的流动老人家庭。一方面，随着时代的飞速发展，科技带来的新事物应接不暇，年轻人对父辈经验的依赖度降低，再加上老人的认知能力、经济能力、生活能力随着年龄而降低，老人不得不更多地依赖子女，传统的父母权威失落了；另一方面，近几十年来，中国发生了诸多巨变，两代人的生命历程、人生体验差异巨大，加剧了两代人的沟通难度。现代社会普遍为核心家庭，其成员是夫妻两人及其未婚孩子，强调独立和私密，但它削弱了两代人之间的关系。在代际共处的情况下，老人来到子女家，有时一些琐事会带来家庭矛盾，从而加剧流动老人的孤独感、寄居感。</p>
+										<p>“社区‘隐形老人’目前已形成一定规模，他们离开自己熟悉的环境来到陌生的城市，身份、心理认知带来社交行为的阻碍，可能会出现精神抑郁等同质化问题。”中国青年政治学院教师、北师大心理学专业博士周军分析。“心理健康、精神疾病的发生，与人际关系的支持程度有非常大的联系。一个随迁老人本身就面临‘连根拔起’的新生活、又缺少人际支持，生活中没有交往的对象，无人倾诉。”</p>	
+										<!--<a href="#" class="special">Learn more</a>-->
+									</div>
+								</div>
+							</section>
+							<!--插入一张图片-->
+						<!-- 插入一张图片 -->
+							<section id="four" class="wrapper alt style1">
+                                <div class="inner">
+                                    <section class="features">
+                                        <article>
+                                            <a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+                                            <p>将孙子送到幼儿园后，老人站在门口不肯离去。</p>
+                                        </article>
+                                        <article>
+                                            <a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+                                            <p>食堂里，一位老人正帮着子女给自己的孙子喂饭。</p>
+                                        </article>
+                                        <article>
+                                            <a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
+                                            <p>孙女放学后不肯离开幼儿园，老人并没有劝阻她离开，而是选择陪伴她。</p>
+                                        </article>
+                                        <article>
+                                            <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+                                            <p>梅阿姨和她在美国认识的伙伴，几位老人都是因照顾孙儿漂洋过海。</p>
+                                        </article>
+                                    </section>
+                                </div>
+                            </section>
+					</section>
+
+							<!--第五部分-->
+						<section id="one" class="wrapper spotlight style1" style="background-color: #f8f8f1">
+								<div class="inner">
+									<!--<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>-->
+									<div class="content">
+									<h1 >1/45873.3</h1>
+										<h3 class="major">一所定点医院对应4万多名流动者</h2>
+										<p>在经济上，流动老人的自我支持能力明显不足。调查显示，只有大约1/3的流动老人主要依靠养老金及储蓄金维系生活，而主要依赖子女等供养其生活的流动老人占34.5%。</p>
+										<p>在医疗保障上，尽管近九成的流动老人参加了各种形式的医疗保险，但92.9%是在户籍地参加的。2017年12月，全国所有的省级行政区都已经接入国家人保部统一的异地就医报销网络。理论上，在全国范围内就医就可以直接在异地报销了，事实却并没有那么简单。</p>
+										<p>医保要想异地报销，仍需要回去参保所在地指定的部门进行申请、备案。部分地区定点机构数量较少，整个省只有一个定点备案机构。另外，备案对外地居住时间有一定的要求，需要提供外地的暂住证等证件，过程繁琐。</p>	
+										<div><!--经办机构分布-->
+                                            <div class='tableauPlaceholder' id='viz1529289709343' style='position: relative'><noscript>
+                                                <a href='#'><img alt='异地就医经办机构分布仪表盘 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;2_&#47;2_3144&#47;sheet3&#47;1_rss.png' style='border: none' /></a></noscript>
+                                                <object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='2_3144&#47;sheet3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;2_&#47;2_3144&#47;sheet3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+                                            </div>                
+                                            <script type='text/javascript'>                    
+                                                var divElement = document.getElementById('viz1529289709343');                    
+                                                var vizElement = divElement.getElementsByTagName('object')[0];                   
+                                                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+                                                var scriptElement = document.createElement('script');                    
+                                                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                                                vizElement.parentNode.insertBefore(scriptElement, vizElement);               
+                                            </script>
+                                        </div>
+										<p>其次，不是每一家医院都能用外地的医保。一个城市会指定一些定点的医院，不在这个范围内的医院不能直接结算。截至目前，全国跨省定点医疗机构增加到9575家，超过90%的三级医疗机构已联接入网。</p>
+										<div><!--定点医院分布-->
+                                            <div class='tableauPlaceholder' id='viz1529289532996' style='position: relative'><noscript><a href='#'><img alt='异地定点医院分布仪表盘 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;2_&#47;2_3144&#47;sheet2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='2_3144&#47;sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;2_&#47;2_3144&#47;sheet2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1529289532996');        var vizElement = divElement.getElementsByTagName('object')[0];vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';    var scriptElement = document.createElement('script');                    
+                                                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                                             </script>
+                                          </div>
+										<p>但是，定点医院的分布并不均衡，部分地区定点医院数量太少。福建省份平均每个定点医院对应了45873.3名来自外省的流动人口，这个比例是新疆的12.3倍，这还不包括省内的流动人口。</p>
+										<div><!--定点医院承载量-->
+                                            <script type='text/javascript' src='https://eu-west-1a.online.tableau.com/javascripts/api/viz_v1.js'></script>
+                                            <div class='tableauPlaceholder' id='viz1529315391856' style='position: relative;'><noscript>< a href=' '>< img alt='仪表板 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;_1&#47;_19344&#47;1_1&#47;1_rss.png' style='border: none' /></ a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='_19344&#47;1_1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;_1&#47;_19344&#47;1_1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    
+                                            var divElement = document.getElementById('viz1529315391856');                    
+                                            var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+                                            var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                                            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                                            </script>
+                                        </div>
+										<p>其次，异地医保报销比例一般低于参保地同等级别医院。可能有的地区会提高异地报销的自付比例，降低报销比例，设置报销最高限额，总的来说，一般要低于参保地的医疗费用报销比例。</p>
+										<p>最后，跨省异地就医直接结算适合住院患者，不适合门诊患者。</p>
+										<p>报告中提到，居住在石家庄的辽宁籍老人丁阿姨，在老家参加了新农合，每年交款100元，在外地就医只能报销30%。而从石家庄到辽宁老家的交通费起码需要600元。老人觉得报销的钱还够不上路费，所以通常选择到药店购药自我治疗。无法真正享受到医保，增大了流动老人医疗负担，直接导致流动老人选择尽量减少医疗支出，这对其身体健康成为了巨大的隐患。</p>
+
+										<!--<a href="#" class="special">Learn more</a>-->
+									</div>
+								</div>
+							</section>
+						<!-- <a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a> -->
+					</section>
+
+                    <!-- 插入图片pic05 -->
+					<section id="two" class="wrapper alt spotlight style2" style="background-color: #f8f8f1">
+                                <div class="trapezoid"> </div> 
+                                  <img src="images/pic05.jpg" style="width:100%" alt="" />
+                                <div class="triangle"> </div>
+                        </section>
+
+					<section id="five" class="wrapper alt spotlight style2" style="background-color: #f8f8f1">
+								<div class="inner">
+									<div class="content">
+									<p>参考文献：
+
+									<br>[1]《中国流动人口发展报告2016》
+									<br>[2]《中国流动人口发展报告2017》
+									<br>[3]《北京社会治理发展报告(2016～2017)》
+									<br>[4]苗瑞凤.老年流动人口城市适应性的社会学分析[J].中国老年学杂志,2012,32(18):4095-4097.
+									<br>[5]李芳,龚维斌,李姚军.老年流动人口居留意愿的影响因素分析——以布迪厄理论为视角[J].人口与社会,2016,32(04):3-12.
+									<br>[6]刘亚娜.社区视角下老漂族社会融入困境及对策——基于北京社区“北漂老人”的质性研究[J].社会保障研究,2016(04):34-43.
+									<br>[7]刘颖. 中国老年人口迁移特征与影响的实证研究[D].首都经济贸易大学,2014.
+									<br>[8]王世斌,申群喜,王明忠.比较视角下流动老年人社会参与的实证研究[J].南方人口,2015,30(05):44-51+80.
+									<br>[9]李升,黄造玉.超大城市流动老人的流动与生活特征分析——基于对北上广深流动家庭的调查[J].调研世界,2018(02):3-9.
+									<br>[10]2017年8月4日央广新闻《1800万！这些流动老人正过着“连根拔起”的生活……》</p>
+	
+									</div>
+								</div>
+							</section>
+				<!-- Footer -->
+					<section id="footer" style="background-color: #f8f8f1">
+						<!-- <div align="right"> -->
+                        <div  style="padding :0 200px 50px 800px">
+                               <p><em> &copy;数说新语</em>| 熊隽晗 白乐天 张清霞 胡心悦<br>
+							     中国传媒大学新闻学院 | 2015级新闻学（数据新闻报道）<br></p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

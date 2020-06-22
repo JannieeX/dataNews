@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+    title : {
+        text: '各国产假对比图',
+        // subtext: '数据来自西安兰特水电测控技术有限公司',
+        x: 'center',
+        align: 'right'
+    },
+    grid: {
+        bottom: 150,
+        left: '20%',
+        right:'20%'
+    },
+    toolbox: {
+        feature: {
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    tooltip : {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            animation: false,
+            label: {
+                backgroundColor: '#505765'
+            }
+        }
+    },
+    legend: {
+        data:['女人产假总周数', '女人带薪产假周数','男人产假总周数', '男人带薪产假周数'],
+        bottom:50,
+    },
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : true,
+            axisLine: {onZero: false},
+            axisLabel: {  
+                   interval:0,  
+                   formatter:function(value)  
+                               {  
+                                   return value.split("").join("\n");  
+                               }    
+                } ,
+            data : [
+              "法国","德国","西班牙","奥地利","挪威","瑞典","英国","日本","爱尔兰","新西兰","加拿大","澳大利亚","丹麦","意大利","希腊","芬兰","葡萄牙","荷兰","比利时","中国","瑞士","新加坡","美国"]
+              .map(function (str) {
+                return str.replace(' ', '\n')
+            })
+        }
+    ],
+    yAxis: [
+        {
+            name: '周数',
+            type: 'value',
+            max: 318,
+            
+        },
+        {
+            name: '周数',
+            // nameLocation: 'start',
+            max: 318,
+            type: 'value',
+            inverse: true
+        }
+    ],
+     dataZoom: [
+        {
+            show: true,
+            realtime: true,
+            start: 80,
+            end: 90
+        },
+        {
+            type: 'inside',
+            realtime: true,
+            start: 65,
+            end: 85
+        }
+    ],
+    series: [
+        {
+        name:'女人产假总周数',
+        animation: true,
+        type: 'bar',
+        markArea: {
+                // silent: false,
+                itemStyle:{
+                    color :'rgb(144,144,144,0.3)'
+                },
+                data: [[{
+                    xAxis: '比利时'
+                }, {
+                    xAxis: '瑞士'
+                }]]
+            },
+        itemStyle: {
+            normal: {
+                color: '#006768'
+                // color:'#eb726f'
+            }
+        },
+        silent: true,
+        barWidth: 10,
+        barGap: '-100%', // Make series be overlap
+        data: [162,162,156,112,90,85,65,58,56,52,52,52,50,48,47,44,30,29,28,14,14,12,12]
+    }, {
+        name:'女人带薪产假周数',
+        animation: true,
+        type: 'bar',
+        barWidth: 10,
+        z: 10,
+        itemStyle: {
+            normal: {
+                // color: '#023'
+                color:'#023435'
+            }
+        },
+        data: [20,42,16,16,38,40,12,26,22,14,29,0,19,25,34,29,17,16,15,14,11,8,0]
+ },
+{
+        name:'男人产假总周数',
+        yAxisIndex:1,
+        type: 'bar',
+        itemStyle: {
+            normal: {
+                
+                color:'#dfd55d'
+            }
+        },
+        silent: true,
+        barWidth: 10,
+        barGap: '-100%', // Make series be overlap
+        data: [156,8,156,4,60,78,15,0,14,2,0,0,2,22,14,4,1,13,15,2,0,2,12]
+    }, 
+    {
+        name:'男人带薪产假周数',
+        yAxisIndex:1,
+        type: 'bar',
+        barWidth: 10,
+        z: 10,
+        itemStyle: {
+            normal: {
+                
+                color:'#f5c464'
+            }
+        },
+        data: [2,4,2,0,6,7,2,0,0,0,0,0,1,0,1,3,1,0,4,2,0,2,0]
+    },
+    ]
+};
+;;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>

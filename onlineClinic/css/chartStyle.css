@@ -55,8 +55,8 @@
 @media(min-width: 426px){
    
   .chart{
-    width: 700px;
-    height:400px;
+    width: 650px;
+    height:500px;
     text-align:center;
     
   }
@@ -89,8 +89,8 @@
   }
 
   #chart8{
-    width: 600px;
-    height:600px;
+    width: 1200px;
+    height:1200px;
   }
   
 

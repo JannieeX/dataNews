@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = null;
+app.title = '气泡图';
+
+var data = [
+    [['北京',5183,'保姆月平均工资'],['广州',5164,'保姆月平均工资'],['上海',6367,'保姆月平均工资'],['天津',6178,'保姆月平均工资'],['成都',6402,'保姆月平均工资'],['大连',6144,'保姆月平均工资'],['深圳',8315,'保姆月平均工资'],['长沙',6186,'保姆月平均工资'],['重庆',6584,'保姆月平均工资'],['青岛',6057,'保姆月平均工资'],['郑州',6191,'保姆月平均工资'],['武汉',6331,'保姆月平均工资'],['南京',6680,'保姆月平均工资'],['杭州',7330,'保姆月平均工资'],['西安',5872,'保姆月平均工资'],['佛山',7017,'保姆月平均工资'],['东莞',6998,'保姆月平均工资']],
+    [['北京',9240,'居民月平均工资'],['广州',7409,'居民月平均工资'],['上海',8962,'居民月平均工资'],['天津',5451,'居民月平均工资'],['成都',4867,'居民月平均工资'],['大连',4291,'居民月平均工资'],['深圳',5258,'居民月平均工资'],['长沙',3841,'居民月平均工资'],['重庆',4150,'居民月平均工资'],['青岛',5833,'居民月平均工资'],['郑州',4500,'居民月平均工资'],['武汉',4167,'居民月平均工资'],['南京',5307,'居民月平均工资'],['杭州',6000,'居民月平均工资'],['西安',4267,'居民月平均工资'],['佛山',5358,'居民月平均工资'],['东莞',5083,'居民月平均工资']]
+];
+
+option = {
+   
+    title: {
+        text: '保姆月平均工资与居民月平均工资年各国家人均寿命与 GDP'
+    },
+    legend: {
+        right: 10,
+        data: ['保姆月平均工资', '居民月平均工资']
+    },
+    xAxis: {
+        splitLine: {
+            lineStyle: {
+                type: 'dashed'
+            }
+        },
+        data: ['北京','广州','上海','天津','成都','大连','深圳','长沙','重庆','青岛','郑州','武汉','南京','杭州','西安','佛山','东莞'],
+    },
+    yAxis: {
+        splitLine: {
+            lineStyle: {
+                type: 'dashed'
+            }
+        },
+        scale: true,
+        min: 0,
+        max: 10000
+    },
+    series: [
+    {
+            name:'bai',
+            type:'bar',
+            barWidth: '2',
+            barGap:'-100%',
+            itemStyle: {
+            normal: {
+                color: '#ffcc99'
+            }
+        },
+            data:[5183,5164,6367,6178,6402,6144,8315,6186,6584,6057,6191,6331,6680,7330,5872,7017,6998]
+        },
+         {
+            name:'le1',
+            type:'bar',
+            barWidth: '2',
+            barGap:'-100%',
+            itemStyle: {
+            normal: {
+                color: '#ffcc99'
+            }
+        },
+            data:[5183,5164,6367,,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        },
+        {
+            name:'tian',
+            type:'bar',
+            barWidth: '2',
+            // barGap:'-100%',
+            itemStyle: {
+            normal: {
+                color: 'green'
+            }
+        },
+            data:[9240,7409,8962,5451,4867,4291,5258,3841,4150,5833,4500,4167,5307,6000,4267,5358,5083]
+        },
+                 {
+            name:'le1',
+            type:'bar',
+            barWidth: '2',
+            barGap:'-100%',
+            itemStyle: {
+            normal: {
+                color: '#ffcc99'
+            }
+        },
+            data:[5183,5164,6367,,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        },
+    {
+        name: '保姆月平均工资',
+        data: data[0],
+        type: 'scatter',
+        label: {
+            emphasis: {
+                show: true,
+                formatter: function (param) {
+                    return param.data[1];
+                },
+                position: 'top'
+            }
+        },
+        itemStyle: {
+            normal: {
+                shadowBlur: 10,
+                shadowColor: 'rgba(120, 36, 50, 0.5)',
+                // shadowColor:'#DCD0C0',
+                shadowOffsetY: 5,
+                color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
+                    offset: 0,
+                    color: '#ffcc99'
+                }, {
+                    offset: 1,
+                    color: '#ffcc99'
+                }])
+            }
+        }
+    }, {
+        name: '居民月平均工资',
+        data: data[1],
+        type: 'scatter',
+        label: {
+            emphasis: {
+                show: true,
+                formatter: function (param) {
+                    return param.data[1];
+                },
+                position: 'top'
+            }
+        },
+        itemStyle: {
+            normal: {
+                
+                color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
+                    offset: 0,
+                    color: 'green'
+                }, {
+                    offset: 1,
+                    color: 'green'
+                }])
+            }
+        }
+      
+    }
+        
+    ]
+};;;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>
