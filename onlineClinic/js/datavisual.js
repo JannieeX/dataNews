@@ -237,7 +237,7 @@ option = {
             type: 'bar',
             stack: '总量',
             label: {
-                show: false,
+                show: true,
                 position: 'inside',
                 color:'#5b90c5'
             },
@@ -351,11 +351,11 @@ var option = {
                     //rotate: -90,
                     verticalAlign: 'middle',
                     align: 'middle',
-                    fontSize: 26,
+                    fontSize: 13,
                     color:"#ffffff",
                     backgroundColor :'#5b90c5',
-                    padding: [8, 10],
-                    borderRadius:10
+                    padding: [4, 5],
+                    borderRadius:5
 
                 },
 
