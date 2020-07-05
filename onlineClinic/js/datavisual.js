@@ -95,7 +95,7 @@ myChart.setOption(option = {
                 position: 'left',
                 verticalAlign: 'middle',
                 align: 'right',
-                fontSize:20,
+                fontSize:14,
                 backgroundColor :'#ffffff'
 
             },
